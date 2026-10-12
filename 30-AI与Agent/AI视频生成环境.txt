@@ -1,0 +1,966 @@
+你现在需要帮我完整部署一个用于 MiniMax H3 / ComfyUI 的 AMD GPU AI 视频生成环境。
+
+不要只给教程，你需要实际执行检测、安装、配置、验证和错误修复，直到环境可用为止。
+
+==================================================
+一、我的硬件和系统
+==================================================
+
+宿主系统：
+- Windows
+- 已安装 WSL2
+- WSL Distribution：Ubuntu-24.04
+- WSL 用户：stove
+
+GPU：
+- AMD Radeon RX 9070 GRE
+- RDNA4
+- gfx1201
+- 12GB VRAM
+
+目标技术栈：
+
+Windows AMD Driver
+→ WSL2 Ubuntu 24.04
+→ AMD ROCm
+→ ROCm PyTorch
+→ ComfyUI
+→ ComfyUI Manager
+→ ComfyUI-KJNodes
+→ 后续 MiniMax H3
+
+最终目标：
+
+PyTorch 和 ComfyUI 必须真正使用 RX 9070 GRE GPU，
+不能使用 CPU fallback。
+
+==================================================
+二、最重要的存储要求
+==================================================
+
+我希望这个 AI 环境尽可能全部存放在：
+
+E:\AI-H3
+
+Windows 物理目录统一规划：
+
+E:\AI-H3\
+├── WSL\
+│   └── Ubuntu-24.04\
+├── Shared\
+│   ├── Downloads\
+│   ├── Models-Cache\
+│   └── Output\
+└── Backup\
+
+核心原则：
+
+1. Ubuntu-24.04 的 WSL 虚拟磁盘尽量迁移到：
+
+E:\AI-H3\WSL\Ubuntu-24.04
+
+2. ComfyUI、Python venv、custom_nodes 等程序文件不要直接运行在：
+
+/mnt/e
+
+因为这是 Windows NTFS 挂载目录。
+
+3. 它们应该运行在 Linux ext4 文件系统中，例如：
+
+/home/stove/AI/ComfyUI
+
+但是这个 Linux ext4.vhdx 本身必须尽可能物理存储在：
+
+E:\AI-H3\WSL\Ubuntu-24.04
+
+从而达到：
+
+Windows 物理存储：E盘
++
+Linux 运行环境：ext4
+
+4. 后续大型下载、输出视频等适合 Windows 直接访问的文件，可以使用：
+
+E:\AI-H3\Shared\Downloads
+E:\AI-H3\Shared\Output
+
+对应 WSL：
+
+/mnt/e/AI-H3/Shared/Downloads
+/mnt/e/AI-H3/Shared/Output
+
+但是：
+
+Python venv
+ComfyUI 源码
+custom_nodes
+pip package
+ROCm Python 环境
+
+禁止安装到 /mnt/e。
+
+==================================================
+三、WSL 迁移是重大操作
+==================================================
+
+第一步先检查 Ubuntu-24.04 当前实际存储位置。
+
+检查：
+
+wsl -l -v
+
+以及当前 Windows / WSL 环境是否支持官方的：
+
+wsl --manage <distribution> --move <location>
+
+如果当前 Windows / WSL 版本支持安全的：
+
+wsl --manage Ubuntu-24.04 --move ...
+
+那么优先考虑移动到：
+
+E:\AI-H3\WSL\Ubuntu-24.04
+
+但是不要立刻执行。
+
+必须先告诉我：
+
+- 当前 Ubuntu-24.04 存储位置
+- 当前 Ubuntu 占用空间
+- E盘剩余空间
+- 推荐的迁移方法
+- 是否需要关闭 WSL
+- 是否存在数据风险
+
+然后等待我的确认。
+
+如果当前 Windows 版本不支持 wsl --manage --move，
+可以考虑：
+
+wsl --export
+wsl --import
+
+但是：
+
+禁止未经确认执行：
+
+wsl --unregister
+
+禁止删除当前 Ubuntu。
+
+必须先：
+导出备份
+→ 验证备份
+→ 告诉我方案
+→ 等待确认
+→ 再迁移。
+
+如果迁移失败，必须保留原 Ubuntu。
+
+==================================================
+四、Windows 兼容性检测
+==================================================
+
+当前是 2026 年。
+
+不要机械照抄旧 ROCm 教程。
+
+首先确认：
+
+- Windows 版本
+- WSL 版本
+- Ubuntu 24.04
+- AMD Windows Driver
+- AMD ROCm WSL 当前官方兼容矩阵
+
+执行并记录：
+
+cat /etc/os-release
+uname -a
+uname -r
+whoami
+pwd
+
+在 Windows 侧检查：
+
+cmd.exe /c ver
+powershell.exe -Command "Get-ComputerInfo | select WindowsProductName,WindowsVersion,OsBuildNumber"
+wsl.exe --version
+
+确认：
+
+Ubuntu 24.04
+WSL2
+
+然后检查：
+
+ls -l /dev/dxg
+
+如果 /dev/dxg 不存在：
+
+停止 ROCm 安装，
+先诊断 Windows → WSL GPU 映射问题。
+
+特别注意：
+
+如果当前 Windows 版本不在 AMD 官方当前 ROCm WSL 支持范围：
+
+不要强装 ROCm。
+
+告诉我：
+
+当前版本：
+官方最低要求：
+差异：
+推荐操作：
+
+然后停止等待。
+
+==================================================
+五、检查系统资源
+==================================================
+
+执行：
+
+free -h
+swapon --show
+df -h /
+df -h ~
+df -h /mnt/e
+
+记录：
+
+- System RAM
+- Swap
+- Linux 磁盘
+- E盘空间
+
+MiniMax H3 后续需要大量：
+
+RAM
+磁盘
+模型空间
+
+如果 E盘空间明显不足，提前报告。
+
+==================================================
+六、检测已有 ROCm
+==================================================
+
+执行：
+
+which rocminfo || true
+rocminfo 2>/dev/null || true
+
+which hipcc || true
+hipcc --version 2>/dev/null || true
+
+ls /opt/rocm 2>/dev/null || true
+
+如果已有 ROCm：
+
+不要盲目覆盖。
+
+确认版本和 RX 9070 GRE / gfx1201 是否兼容。
+
+重点检查：
+
+rocminfo | grep -i -E "gfx|marketing|name"
+
+需要看到：
+
+gfx1201
+
+或正确的 RDNA4 GPU Agent。
+
+==================================================
+七、ROCm 安装原则
+==================================================
+
+这是：
+
+WSL2 Ubuntu 24.04
+
+不是裸机 Linux。
+
+不得安装会覆盖 WSL GPU 驱动模型的 Linux DKMS 驱动。
+
+安装前必须阅读 AMD 当前官方：
+
+ROCm
+Radeon
+WSL
+Ubuntu 24.04
+
+安装说明。
+
+如果使用 amdgpu-install，
+必须采用官方当前适用于 WSL 的方法。
+
+不要：
+
+- 安装 CUDA
+- 安装 NVIDIA Driver
+- 使用 NVIDIA ROCm 教程
+- 使用旧版 ROCm 6.x 教程
+- 盲目安装 DKMS
+
+不要随便设置：
+
+HSA_OVERRIDE_GFX_VERSION
+
+RX 9070 GRE 应原生属于 gfx1201。
+
+除非有明确技术原因并解释，否则禁止使用该变量。
+
+==================================================
+八、基础软件
+==================================================
+
+确保：
+
+git
+curl
+wget
+python3
+python3-venv
+python3-dev
+pip
+build-essential
+cmake
+ninja-build
+pkg-config
+libgl1
+libglib2.0-0
+ffmpeg
+
+缺什么安装什么。
+
+可以：
+
+sudo apt update
+
+然后安装必要包。
+
+禁止安装无关的大型软件包。
+
+==================================================
+九、Linux 内部安装目录
+==================================================
+
+WSL 成功迁移或确认存储位置后：
+
+统一 Linux AI 根目录：
+
+/home/stove/AI
+
+ComfyUI：
+
+/home/stove/AI/ComfyUI
+
+venv：
+
+/home/stove/AI/ComfyUI/.venv
+
+custom nodes：
+
+/home/stove/AI/ComfyUI/custom_nodes
+
+models：
+
+/home/stove/AI/ComfyUI/models
+
+启动脚本：
+
+/home/stove/AI/ComfyUI/start-comfyui.sh
+
+环境报告：
+
+/home/stove/AI/ComfyUI/ENVIRONMENT.md
+
+禁止安装到：
+
+/mnt/c
+/mnt/d
+/mnt/e
+/mnt/host
+/root
+/tmp
+
+注意：
+
+虽然 Linux 路径是：
+
+/home/stove/AI
+
+但整个 Ubuntu ext4.vhdx 应尽可能位于：
+
+E:\AI-H3\WSL\Ubuntu-24.04
+
+==================================================
+十、安装 ComfyUI
+==================================================
+
+创建：
+
+mkdir -p /home/stove/AI
+
+确保 owner：
+
+stove:stove
+
+进入：
+
+cd /home/stove/AI
+
+如果 ComfyUI 不存在：
+
+git clone https://github.com/Comfy-Org/ComfyUI.git \
+/home/stove/AI/ComfyUI
+
+如果已经存在：
+
+检查：
+
+git status
+
+存在用户修改时禁止覆盖。
+
+进入：
+
+cd /home/stove/AI/ComfyUI
+
+创建：
+
+python3 -m venv .venv
+
+激活：
+
+source .venv/bin/activate
+
+升级：
+
+python -m pip install -U pip setuptools wheel
+
+验证：
+
+which python
+python --version
+pip --version
+
+Python 必须来自：
+
+/home/stove/AI/ComfyUI/.venv/
+
+==================================================
+十一、安装 AMD ROCm PyTorch
+==================================================
+
+不要机械安装某个固定版本。
+
+先检查：
+
+ComfyUI 官方 README
+PyTorch 官方 ROCm wheels
+AMD 当前 ROCm 官方文档
+
+确定当前：
+
+ROCm
+PyTorch
+ComfyUI
+
+兼容版本。
+
+优先使用：
+
+stable ROCm PyTorch
+
+而不是 nightly。
+
+确保安装的是：
+
+AMD ROCm / HIP build
+
+不是：
+
+CUDA
+CPU-only
+
+安装完成执行：
+
+python - <<'PY'
+import torch
+
+print("PyTorch:", torch.__version__)
+print("HIP:", torch.version.hip)
+print("CUDA API available:", torch.cuda.is_available())
+print("Device count:", torch.cuda.device_count())
+
+if torch.cuda.is_available():
+    print("Device 0:", torch.cuda.get_device_name(0))
+    p = torch.cuda.get_device_properties(0)
+    print("VRAM GB:", p.total_memory / 1024**3)
+PY
+
+注意：
+
+ROCm PyTorch 仍然使用：
+
+torch.cuda
+
+API，这是正常的。
+
+成功条件：
+
+torch.cuda.is_available() == True
+
+HIP != None
+
+GPU 应对应：
+
+AMD Radeon RX 9070 GRE
+gfx1201
+
+==================================================
+十二、真实 GPU 运算测试
+==================================================
+
+不能只检测名称。
+
+执行真实矩阵乘法：
+
+python - <<'PY'
+import torch
+import time
+
+assert torch.cuda.is_available()
+
+device = torch.device("cuda")
+
+a = torch.randn((4096,4096), device=device)
+b = torch.randn((4096,4096), device=device)
+
+torch.cuda.synchronize()
+
+start = time.time()
+
+c = a @ b
+
+torch.cuda.synchronize()
+
+print("GPU:", torch.cuda.get_device_name(0))
+print("Result:", c.shape)
+print("Time:", time.time() - start)
+print("Allocated MB:", torch.cuda.memory_allocated()/1024**2)
+
+print("GPU TEST PASSED")
+PY
+
+必须成功出现：
+
+GPU TEST PASSED
+
+失败则继续诊断。
+
+==================================================
+十三、安装 ComfyUI Requirements
+==================================================
+
+执行：
+
+cd /home/stove/AI/ComfyUI
+
+source .venv/bin/activate
+
+pip install -r requirements.txt
+
+完成后再次确认 PyTorch 没被替换。
+
+执行：
+
+python - <<'PY'
+import torch
+print("PyTorch:", torch.__version__)
+print("HIP:", torch.version.hip)
+print("Available:", torch.cuda.is_available())
+print(
+    "GPU:",
+    torch.cuda.get_device_name(0)
+    if torch.cuda.is_available()
+    else "NO GPU"
+)
+PY
+
+如果 requirements 把 ROCm torch 换掉：
+
+恢复正确 ROCm PyTorch。
+
+==================================================
+十四、ComfyUI Manager
+==================================================
+
+先检查当前版本 ComfyUI 是否已经提供 Manager。
+
+如果需要安装：
+
+只使用 Comfy-Org 官方 Manager。
+
+安装位置：
+
+/home/stove/AI/ComfyUI/custom_nodes/
+
+不得安装来源不明 fork。
+
+==================================================
+十五、KJNodes
+==================================================
+
+安装官方：
+
+ComfyUI-KJNodes
+
+目标路径：
+
+/home/stove/AI/ComfyUI/custom_nodes/ComfyUI-KJNodes
+
+按照它当前 README 安装 dependencies。
+
+AMD 环境特别注意：
+
+不得因为 optional dependencies 安装：
+
+CUDA-only xformers
+CUDA-only flash-attention
+NVIDIA-only SageAttention
+
+优先保证：
+
+MiniMax H3 Chunk FeedForward
+MiniMax H3 Low VRAM Attention
+
+等节点可以工作。
+
+==================================================
+十六、AMD Attention
+==================================================
+
+初期优先使用：
+
+PyTorch native attention
+
+不要强行装 NVIDIA SageAttention。
+
+如果 ComfyUI 当前官方针对 RDNA4 推荐：
+
+--use-pytorch-cross-attention
+
+或者其他 AMD 参数，
+
+确认后再使用。
+
+任何实验环境变量：
+
+TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL
+PYTORCH_TUNABLEOP_ENABLED
+
+都必须先解释用途。
+
+初次安装优先稳定。
+
+==================================================
+十七、ComfyUI 启动
+==================================================
+
+执行：
+
+cd /home/stove/AI/ComfyUI
+source .venv/bin/activate
+
+启动：
+
+python main.py --listen 0.0.0.0
+
+检查完整日志。
+
+成功标准：
+
+- PyTorch ROCm 正常
+- GPU 被识别
+- VRAM 大约 12GB
+- 无 CUDA-only 致命错误
+- custom nodes 加载
+- HTTP Server 正常
+
+Windows 浏览器应能访问：
+
+http://localhost:8188
+
+如果 localhost 不通：
+
+诊断 WSL 网络。
+
+不要未经允许关闭 Windows 防火墙。
+
+==================================================
+十八、共享输出目录
+==================================================
+
+Windows 输出目录统一使用：
+
+E:\AI-H3\Shared\Output
+
+对应：
+
+/mnt/e/AI-H3/Shared/Output
+
+环境稳定后，可以考虑：
+
+让 ComfyUI 最终输出方便地同步或保存到该目录。
+
+但是：
+
+不要为了输出目录修改 ComfyUI 核心代码。
+
+优先使用：
+启动参数
+配置文件
+符号链接
+或官方支持的方法。
+
+如果使用 symlink：
+
+先确认不会导致 ComfyUI 插件兼容问题。
+
+==================================================
+十九、下载缓存
+==================================================
+
+后续 Hugging Face / 模型大文件缓存，
+尽可能避免占 C 盘。
+
+可规划：
+
+E:\AI-H3\Shared\Downloads
+
+以及：
+
+E:\AI-H3\Shared\Models-Cache
+
+但是：
+
+在本阶段不要下载 MiniMax H3 大模型。
+
+如果未来需要设置：
+
+HF_HOME
+HUGGINGFACE_HUB_CACHE
+TORCH_HOME
+
+先设计统一位置。
+
+优先目标：
+
+避免 C盘产生几十 GB 缓存。
+
+但不要为了缓存目录破坏 Linux 权限或性能。
+
+==================================================
+二十、启动脚本
+==================================================
+
+创建：
+
+/home/stove/AI/ComfyUI/start-comfyui.sh
+
+内容至少：
+
+#!/usr/bin/env bash
+set -e
+
+cd /home/stove/AI/ComfyUI
+source .venv/bin/activate
+
+python main.py --listen 0.0.0.0
+
+如果后来验证某 AMD 参数确实有用，
+再添加。
+
+执行：
+
+chmod +x /home/stove/AI/ComfyUI/start-comfyui.sh
+
+==================================================
+二十一、环境报告
+==================================================
+
+创建：
+
+/home/stove/AI/ComfyUI/ENVIRONMENT.md
+
+记录：
+
+Windows version
+WSL version
+Ubuntu version
+WSL virtual disk physical location
+GPU
+GPU architecture
+VRAM
+RAM
+Swap
+ROCm version
+rocminfo Agent
+Python
+PyTorch
+torch.version.hip
+ComfyUI commit
+Manager version
+KJNodes commit
+安装目录
+E盘目录
+启动命令
+访问地址
+
+==================================================
+二十二、最终验收
+==================================================
+
+必须逐项确认：
+
+[ ] Ubuntu 24.04
+[ ] Ubuntu WSL 数据尽可能位于 E:\AI-H3
+[ ] /dev/dxg 存在
+[ ] ROCm 正常
+[ ] rocminfo 出现 gfx1201
+[ ] PyTorch 是 ROCm/HIP build
+[ ] torch.cuda.is_available() == True
+[ ] RX 9070 GRE 正常识别
+[ ] GPU Tensor 运算成功
+[ ] ComfyUI 安装成功
+[ ] Python venv 位于 Linux ext4
+[ ] ComfyUI 不在 /mnt/e 运行
+[ ] Manager 正常
+[ ] KJNodes 正常
+[ ] localhost:8188 可访问
+[ ] start-comfyui.sh 已创建
+[ ] ENVIRONMENT.md 已创建
+[ ] 大文件缓存不会默认大量占用 C盘
+
+==================================================
+二十三、当前禁止事项
+==================================================
+
+禁止：
+
+- CUDA
+- NVIDIA Driver
+- NVIDIA xformers
+- CUDA-only FlashAttention
+- NVIDIA-only SageAttention
+- 随便使用 HSA_OVERRIDE_GFX_VERSION
+- 把 venv 放 /mnt/e
+- 把 ComfyUI 源码运行在 /mnt/e
+- sudo pip install
+- 污染系统 Python
+- 删除现有 WSL
+- 未经确认执行 wsl --unregister
+- 修改 Docker Desktop
+- 下载 MiniMax H3 大模型
+- 在 GPU 没验证通过时宣称成功
+
+==================================================
+二十四、你的执行方式
+==================================================
+
+你可以自行进行：
+
+检测
+apt
+pip
+git
+venv
+配置
+编译
+测试
+错误修复
+
+普通操作无需每一步询问。
+
+以下情况必须停止并询问：
+
+1. 准备迁移 WSL
+2. 准备执行 wsl --unregister
+3. 需要升级 Windows
+4. 需要更换 AMD Windows Driver
+5. 需要重启 Windows
+6. 需要删除或覆盖文件
+7. 需要修改重大系统配置
+8. sudo 密码需要用户输入
+9. 准备下载超过 5GB 的文件
+10. E盘空间不足
+
+遇到普通报错：
+
+自行定位
+→ 修复
+→ 再验证
+
+不要直接跳过。
+
+==================================================
+二十五、最后汇报格式
+==================================================
+
+最终只在全部可验证项目完成后汇报：
+
+Windows:
+WSL:
+Ubuntu:
+WSL物理位置:
+E盘根目录:
+
+GPU:
+gfx:
+VRAM:
+
+ROCm:
+PyTorch:
+HIP:
+
+ComfyUI:
+Manager:
+KJNodes:
+
+Linux安装目录:
+Windows共享目录:
+
+GPU测试:
+ComfyUI启动测试:
+8188访问:
+
+启动命令:
+
+仍存在的问题:
+
+==================================================
+
+现在开始。
+
+第一阶段只进行：
+
+系统检测
++
+磁盘检测
++
+当前 WSL 存储位置检测
++
+Windows / ROCm 兼容性检测
+
+如果发现 Ubuntu-24.04 当前不在 E盘：
+
+先给我迁移方案。
+
+在我确认之前：
+
+不要执行实际 WSL 迁移。

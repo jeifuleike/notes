@@ -1,0 +1,75 @@
+/* Scoped to growth-interactive notes; Meta Bind controls retain native events. */
+.growth-interactive { --file-line-width:900px; --gi-card:var(--background-primary); --gi-accent:#7760a1; }
+.growth-interactive .inline-title {font-size:22px;color:var(--text-muted);}
+.growth-interactive h1 {font-size:28px;color:var(--text-normal);letter-spacing:-.03em;}
+.growth-interactive .callout[data-callout="growth-card"] {
+ border:1px solid rgba(124,104,162,.25);border-radius:18px;
+ background:var(--gi-card);padding:22px 24px;margin:20px 0;
+ box-shadow:0 5px 20px rgba(45,32,70,.06);mix-blend-mode:normal;
+}
+.growth-interactive .callout[data-callout="growth-card"] > .callout-title {
+ color:var(--text-normal);font-size:18px;font-weight:700;padding-bottom:12px;
+ border-bottom:1px solid rgba(124,104,162,.17);
+}
+.growth-interactive .callout[data-callout="growth-card"] > .callout-title > .callout-icon {display:none;}
+.growth-interactive .callout-content {overflow:visible;}
+.growth-interactive .callout-content p {margin:12px 0;line-height:1.8;}
+.growth-interactive .callout-content strong {font-size:14px;color:var(--gi-accent);}
+.growth-interactive .callout-content input[type="text"],
+.growth-interactive .callout-content input[type="number"],
+.growth-interactive .callout-content textarea,
+.growth-interactive .callout-content select {
+ border:1px solid rgba(124,104,162,.35);border-radius:9px;
+ background:var(--background-secondary);color:var(--text-normal);
+ font:inherit;padding:10px 12px;box-sizing:border-box;max-width:100%;
+}
+.growth-interactive .callout-content input[type="text"],
+.growth-interactive .callout-content textarea {width:100%;}
+.growth-interactive .callout-content textarea {min-height:100px;resize:vertical;line-height:1.7;}
+.growth-interactive .callout-content input[type="range"] {width:100%;accent-color:#9279bd;}
+.growth-interactive .callout-content input:focus,
+.growth-interactive .callout-content textarea:focus {outline:2px solid #bba5dc;outline-offset:2px;}
+.growth-interactive table {width:100%;font-size:14px;}
+.growth-interactive th,.growth-interactive td {padding:10px;border-color:rgba(124,104,162,.22);}
+.growth-interactive th {background:var(--background-secondary);}
+.theme-dark .growth-interactive {--gi-accent:#c6b0ee;}
+@media(max-width:600px){.growth-interactive .callout[data-callout="growth-card"] {padding:16px;border-radius:14px;}}
+
+/* Fix select clipping: override theme fixed height and input padding. */
+.growth-interactive .callout[data-callout="growth-card"] select {
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 38px !important;
+  line-height: normal !important;
+  padding: 6px 32px 6px 12px !important;
+  min-width: min(180px, 100%) !important;
+  max-width: 100% !important;
+  width: auto !important;
+  font-size: 14px !important;
+  vertical-align: middle;
+  text-indent: 0 !important;
+  white-space: nowrap;
+}
+.growth-interactive .callout[data-callout="growth-card"] select option {
+  font-size: 14px;
+  line-height: normal;
+  color: var(--text-normal);
+  background: var(--background-primary);
+}
+
+/* Duration version: clear separation between form rows, including old notes. */
+.growth-interactive .callout[data-callout="growth-card"] .callout-content p {
+  margin-block: 18px !important;
+  line-height: 1.9;
+}
+.growth-interactive .callout[data-callout="growth-card"] .callout-content input[type="text"],
+.growth-interactive .callout[data-callout="growth-card"] .callout-content input[type="number"],
+.growth-interactive .callout[data-callout="growth-card"] .callout-content textarea {
+  height: auto !important;
+  min-height: 38px;
+  line-height: 1.5 !important;
+  margin-block: 6px !important;
+  vertical-align: middle;
+}
+.growth-interactive .callout[data-callout="growth-card"] .callout-content textarea {min-height:100px;}
+.growth-interactive .callout[data-callout="growth-card"] .callout-content select {margin-block:8px !important;}

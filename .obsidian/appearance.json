@@ -1,5 +1,10 @@
 {
-  "theme": "system",
+  "theme": "moonstone",
   "cssTheme": "AnuPpuccin",
-  "accentColor": "#9e77f8"
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "evening-dashboard",
+    "growth-interactive"
+  ],
+  "monospaceFontFamily": "Cascadia Code, Consolas"
 }

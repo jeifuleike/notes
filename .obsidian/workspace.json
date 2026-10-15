@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-AI与Agent/WebChat/产品/版本1.md",
-                "mode": "source",
+                "file": "50-每日自律/2026-10-15.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "版本1"
+              "title": "2026-10-15"
             }
           }
         ]
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "30-AI与Agent/WebChat/产品/版本1.md",
+                "file": "50-每日自律/2026-10-15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-AI与Agent/WebChat/产品/版本1.md",
+                "file": "50-每日自律/2026-10-15.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -201,18 +201,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "76ceb4265ea84462",
+  "active": "2f9fc64afae3b65c",
   "lastOpenFiles": [
-    "新建 文本文档.txt",
+    "20-后端/数据库/Project_Management_System_数据库实战路线.md",
+    "20-后端/数据库/02.MySQL索引核心知识整理.md",
+    "30-AI与Agent/WebChat/产品/版本1.md",
     "50-每日自律/2026-10-15.md",
     "50-每日自律/每日成长-任务时长模板.md",
+    "新建 文本文档.txt",
     "50-每日自律/2026-10-14.md",
     "50-每日自律/2026-10-13.md",
     "50-每日自律/2026-10-12.md",
     "愿你披荆斩棘，磨炼勇气，探索无尽的知识，成为一个值得被世界温柔以待的人！.md",
     "30-AI与Agent/agent学习/openclaw-core-architecture.md",
-    "20-后端/数据库/02.MySQL索引核心知识整理.md",
-    "20-后端/数据库/Project_Management_System_数据库实战路线.md",
     "30-AI与Agent/Agent设计思路.md",
     "50-每日自律/每日成长-交互面板.md",
     "50-每日自律/每日成长-可编辑版.md",
@@ -234,7 +235,6 @@
     "20-后端/数据库",
     "git_pull.bat",
     "git_push.bat",
-    "git_push.bat.txt",
-    "30-AI与Agent/WebChat/产品/版本1.md"
+    "git_push.bat.txt"
   ]
 }

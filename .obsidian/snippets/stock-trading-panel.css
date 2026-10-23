@@ -1,0 +1,62 @@
+/* Obsidian CSS snippet: Stock Trading Panel
+   Enable in Settings → Appearance → CSS snippets.
+   Notes using this style should include:
+   cssclasses:
+     - stock-trading-panel
+*/
+
+.markdown-preview-view.stock-trading-panel,
+.markdown-source-view.stock-trading-panel {
+  --stock-panel-radius: 14px;
+}
+
+.markdown-preview-view.stock-trading-panel h1,
+.markdown-source-view.stock-trading-panel h1 {
+  padding-bottom: 0.45em;
+  border-bottom: 1px solid var(--background-modifier-border);
+  letter-spacing: 0.01em;
+}
+
+.markdown-preview-view.stock-trading-panel h2,
+.markdown-source-view.stock-trading-panel h2 {
+  margin-top: 1.4em;
+}
+
+.markdown-preview-view.stock-trading-panel .callout,
+.markdown-source-view.stock-trading-panel .callout {
+  border-radius: var(--stock-panel-radius);
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.035);
+  margin-block: 1em;
+}
+
+.markdown-preview-view.stock-trading-panel .callout-title,
+.markdown-source-view.stock-trading-panel .callout-title {
+  font-weight: 650;
+}
+
+.markdown-preview-view.stock-trading-panel .callout-content > p,
+.markdown-source-view.stock-trading-panel .callout-content > p {
+  margin-block: 0.7em;
+}
+
+.markdown-preview-view.stock-trading-panel .callout-content code,
+.markdown-source-view.stock-trading-panel .callout-content code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.markdown-preview-view.stock-trading-panel table,
+.markdown-source-view.stock-trading-panel table {
+  width: 100%;
+}
+
+.markdown-preview-view.stock-trading-panel blockquote,
+.markdown-source-view.stock-trading-panel blockquote {
+  border-radius: 10px;
+}
+
+.markdown-preview-view.stock-trading-panel .metadata-container,
+.markdown-source-view.stock-trading-panel .metadata-container {
+  border-radius: 12px;
+}

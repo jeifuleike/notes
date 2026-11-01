@@ -5,7 +5,8 @@
   "enabledCssSnippets": [
     "evening-dashboard",
     "growth-interactive",
-    "stock-trading-panel"
+    "stock-trading-panel",
+    "hide-note-properties"
   ],
   "monospaceFontFamily": "Cascadia Code, Consolas"
 }

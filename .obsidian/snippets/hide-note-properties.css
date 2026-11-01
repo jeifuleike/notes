@@ -1,0 +1,5 @@
+/* Hide in-document properties across the vault; keep metadata intact. */
+.markdown-preview-view .metadata-container,
+.markdown-source-view .metadata-container {
+  display: none !important;
+}

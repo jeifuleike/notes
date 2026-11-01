@@ -1,0 +1,40 @@
+/* Scoped to the journal time-record view. */
+.daily-log { --log-accent: var(--interactive-accent, #8570a5); color:var(--text-normal); }
+.daily-log .daily-log-heading { display:grid; grid-template-columns:112px 1fr; gap:12px; padding:0 12px 8px; font-size:12px; color:var(--text-muted); letter-spacing:.04em; }
+.daily-log .daily-log-item { padding:10px 0; border-bottom:1px solid var(--background-modifier-border); }
+.daily-log .daily-log-row { display:grid; grid-template-columns:112px minmax(0,1fr) 30px; gap:12px; align-items:center; }
+.daily-log button { cursor:pointer; box-shadow:none; font-family:inherit; }
+.growth-interactive .daily-log .daily-log-time,
+.growth-interactive .daily-log .daily-log-content { height:40px !important; min-height:40px !important; margin:0 !important; border:1px solid var(--background-modifier-border); border-radius:10px; background:var(--background-primary); padding:0 12px !important; font-size:14px; box-sizing:border-box; }
+.daily-log .daily-log-time { width:100%; font-variant-numeric:tabular-nums; color:var(--text-normal); }
+.daily-log .daily-log-time[aria-expanded="true"] { border-color:var(--log-accent); }
+.daily-log .daily-log-content { width:100%; min-width:0; color:var(--text-normal); }
+.daily-log .daily-log-content::placeholder { color:var(--text-faint); }
+.daily-log .daily-log-remove { width:30px; height:30px; padding:0; font-size:20px; color:var(--text-muted); background:transparent; border:0; border-radius:8px; }
+.daily-log .daily-log-remove:hover { color:var(--text-error); background:var(--background-modifier-hover); }
+.daily-log .daily-log-add { margin-top:12px; padding:8px 14px; height:36px; border:1px dashed var(--background-modifier-border); border-radius:9px; background:transparent; color:var(--text-muted); font-size:13px; }
+.daily-log .daily-log-add:hover { color:var(--text-normal); background:var(--background-modifier-hover); }
+.daily-log .daily-log-picker { margin:10px 42px 0 0; padding:14px; border:1px solid var(--background-modifier-border); border-radius:12px; background:var(--background-primary); }
+.daily-log .daily-log-clock { display:flex; gap:10px; align-items:center; justify-content:center; max-width:260px; margin:0 auto; }
+.daily-log .daily-log-picker-actions { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; }
+.daily-log .daily-log-cancel,.daily-log .daily-log-confirm { height:32px; padding:0 14px; border-radius:8px; border:0; font-size:13px; }
+.daily-log .daily-log-cancel { background:var(--background-secondary); color:var(--text-normal); }
+.daily-log .daily-log-confirm { background:var(--log-accent); color:var(--text-on-accent); }
+.daily-log .daily-log-status { font-size:12px; color:var(--text-error); }
+.daily-log .daily-log-status:empty { display:none; }
+@media(max-width:480px) { .daily-log .daily-log-heading { grid-template-columns:96px 1fr; } .daily-log .daily-log-row { grid-template-columns:96px minmax(0,1fr) 26px; gap:8px; } .daily-log .daily-log-picker { margin-right:0; } }
+
+.daily-log .daily-log-wheel-column { flex:1; min-width:0; text-align:center; }
+.daily-log .daily-log-wheel-label { display:block; margin-bottom:8px; font-size:12px; color:var(--text-muted); }
+.daily-log .daily-log-wheel-frame { position:relative; border-radius:12px; background:var(--background-secondary); overflow:hidden; }
+.daily-log .daily-log-wheel-frame::before { content:""; position:absolute; top:72px; left:5px; right:5px; height:36px; border-radius:8px; background:var(--interactive-accent); opacity:.12; pointer-events:none; }
+.daily-log .daily-log-wheel { height:180px; padding:72px 0; box-sizing:border-box; overflow-y:auto; scroll-snap-type:y mandatory; scrollbar-width:none; overscroll-behavior:contain; touch-action:pan-y; -webkit-mask-image:linear-gradient(transparent,#000 30%,#000 70%,transparent); mask-image:linear-gradient(transparent,#000 30%,#000 70%,transparent); }
+.daily-log .daily-log-wheel::-webkit-scrollbar { display:none; }
+.daily-log .daily-log-wheel:focus-visible { outline:2px solid var(--log-accent); outline-offset:-2px; border-radius:12px; }
+.daily-log .daily-log-wheel-value { display:flex; align-items:center; justify-content:center; height:36px; box-sizing:border-box; scroll-snap-align:center; color:var(--text-muted); font-size:16px; line-height:36px; font-variant-numeric:tabular-nums; cursor:pointer; user-select:none; }
+.daily-log .daily-log-wheel-value.is-selected { color:var(--text-normal); font-size:22px; font-weight:600; }
+.daily-log .daily-log-wheel-colon { font-size:24px; font-weight:600; padding-top:24px; color:var(--text-muted); }
+
+.daily-log .daily-log-wheel { cursor:grab; user-select:none; }
+.daily-log .daily-log-wheel-value { cursor:inherit; }
+.daily-log .daily-log-wheel.is-dragging { cursor:grabbing; scroll-snap-type:none; scroll-behavior:auto; }

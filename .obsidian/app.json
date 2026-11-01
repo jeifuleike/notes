@@ -4,5 +4,6 @@
   "newFileFolderPath": "00-收件箱",
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": false,
-  "promptDelete": false
+  "promptDelete": false,
+  "propertiesInDocument": "hidden"
 }

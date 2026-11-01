@@ -73,3 +73,9 @@
 }
 .growth-interactive .callout[data-callout="growth-card"] .callout-content textarea {min-height:100px;}
 .growth-interactive .callout[data-callout="growth-card"] .callout-content select {margin-block:8px !important;}
+
+/* Hide the properties panel only on growth forms; retain YAML for all input bindings. */
+.markdown-preview-view.growth-interactive .metadata-container,
+.markdown-source-view.growth-interactive .metadata-container {
+  display: none !important;
+}

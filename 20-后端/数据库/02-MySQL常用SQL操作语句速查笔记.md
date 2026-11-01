@@ -1059,3 +1059,8 @@ SHOW FULL PROCESSLIST;
 **下一阶段**：`Node.js + TypeScript + mysql2/promise` → 连接池 → Repository → 事务处理 → Express 项目接口开发。
 
 > **最后的安全底线**：真实业务数据上，先 `SELECT` 确认范围，再考虑 `UPDATE` / `DELETE`；线上表结构变更使用 Migration、备份和审核流程，别把 Workbench 当成“随手点一下就能撤销”的文本编辑器。
+
+
+## 相关原理与实践
+
+本篇侧重 SQL 语句速查；索引结构、排序与维护见 [[20-后端/数据库/03-MySQL索引核心知识整理]]，提交、内存数据页和刷盘见 [[20-后端/数据库/04-InnoDB事务提交与刷盘]]，章节代码和验收见 [[20-后端/实践/Node后端学习项目/01-Node后端学习项目]]。

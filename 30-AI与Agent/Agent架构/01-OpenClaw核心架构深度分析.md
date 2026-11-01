@@ -1,4 +1,4 @@
-﻿# OpenClaw 核心架构深度分析
+# OpenClaw 核心架构深度分析
 
 > 说明：本文基于 OpenClaw 仓库中的 `README.md`、`docs/**`、`src/**`、`packages/**`、`extensions/**`、`package.json`、`pnpm-workspace.yaml` 等源码和文档整理。凡是源码或文档中没有明确表达、但根据结构推导得到的结论，均标注为“推测”。
 
@@ -126,7 +126,7 @@ Gateway 是 OpenClaw 的核心控制面。
 
 官方文档：[Gateway 网关架构 - OpenClaw](https://docs.openclaw.ai/zh-CN/concepts/architecture)
 
-![image-20260602143947700](C:\Users\djct\AppData\Roaming\Typora\typora-user-images\image-20260602143947700.png)
+> 配图缺失：原笔记引用旧电脑的 Typora 图片，文件未包含在笔记仓库中。原路径：`C:\Users\djct\AppData\Roaming\Typora\typora-user-images\image-20260602143947700.png`。
 
 文档说明，一个长驻 Gateway 进程拥有 messaging surfaces，并通过 WebSocket 给客户端提供连接，见 `docs/concepts/architecture.md:10`、`docs/concepts/architecture.md:13`。Gateway 不是普通后端 API，它统一管理：
 

@@ -31,15 +31,14 @@ async function update() {
     const data = app.metadataCache.getFileCache(file)?.frontmatter;
     if (!data) return;
     const states = new Map();
-    const revised = source.replace(pattern, (block, title) => {
+    for (const match of source.matchAll(pattern)) {
+      const [block, title] = match;
       const expand = keys(block).some(k => filled(data[k]));
       states.set(titleKey(title), expand);
-      return block.replace(/^(> \[!growth-card\])[-+]?/, '$1' + (expand ? '+' : '-'));
-    });
-    if (revised !== source && !stopped) {
-      await app.vault.process(file, current => current === source ? revised : current);
     }
     if (scope && !stopped) {
+      const active = scope.ownerDocument.activeElement;
+      if (active && scope.contains(active) && active.matches('input, textarea, select, [contenteditable="true"]')) return;
       for (const card of scope.querySelectorAll('.callout[data-callout="growth-card"]')) {
         const label = card.querySelector('.callout-title-inner');
         const expand = states.get(titleKey(label?.textContent || ''));
@@ -63,6 +62,9 @@ if (scope) {
   const observer = new dv.container.ownerDocument.defaultView.MutationObserver(schedule);
   observer.observe(scope, { childList:true, subtree:true });
   dv.component.register(() => observer.disconnect());
+  const onFocusOut = () => schedule();
+  scope.addEventListener('focusout', onFocusOut, true);
+  dv.component.register(() => scope.removeEventListener('focusout', onFocusOut, true));
 }
 dv.component.register(() => { stopped = true; dv.container.ownerDocument.defaultView.clearTimeout(timer); });
 await update();

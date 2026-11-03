@@ -1,14 +1,14 @@
-# InnoDB 事务提交、内存数据页与刷盘
+# InnoDB提交与刷盘
 
-本文专门说明一次写入何时返回成功，以及内存数据、日志和磁盘数据文件之间的关系。索引结构与节点维护见 [[20-后端/数据库/03-MySQL索引核心知识整理]]，不在此重复。
+补充专题：InnoDB提交与刷盘。本文为通用学习知识，示例和实验不表示已经执行到项目数据库。项目运行与验收仍在独立代码仓库维护。
 
-## InnoDB 是什么
+## 1. InnoDB 是什么
 
 MySQL 是关系型数据库管理系统，InnoDB 是其内部的存储引擎，不是另一款独立数据库。
 
 MySQL 负责解析 SQL、规划执行等工作，InnoDB 负责表的数据组织、索引、事务、锁和故障恢复等。建表时的 `ENGINE=InnoDB` 表示这张表由该引擎管理。
 
-## 一次添加、修改 SQL，究竟等什么完成才返回
+## 2. 一次添加、修改 SQL，究竟等什么完成才返回
 
 先以普通自动提交的写入为例：
 
@@ -48,7 +48,7 @@ redo log 是重做日志，可用于故障恢复。因此即使部分数据页�
 
 不能理解为“先改内存、直接成功返回、之后才做任何磁盘写入”；也不能理解为“返回成功时所有数据文件都更新完了”。
 
-## SQL 执行完成与事务提交有什么区别
+## 3. SQL 执行完成与事务提交有什么区别
 
 | 情况 | 一条写入 SQL 返回成功意味着什么 |
 | --- | --- |
@@ -71,7 +71,7 @@ commit 成功：事务提交完成
 
 这几步必须使用同一数据库连接。SQL 执行完成、事务提交、所有脏页写回数据文件，是三个不同概念。
 
-## 数据页没刷盘，其他用户读到新值会不会出错
+## 4. 数据页没刷盘，其他用户读到新值会不会出错
 
 读到已经提交、尚未刷盘的新值是正常行为，不会因为它暂时还在内存中就变成错误数据。
 
@@ -95,11 +95,11 @@ READ COMMITTED 和 REPEATABLE READ 隔离级别下，普通查询不会脏读其
 
 所以判断能否读取，重点是事务状态、隔离级别、快照与查询类型，不是数据页是否已经写回磁盘。也不能反过来说“提交后所有已有事务立刻看到最新值”。
 
-## SQL 操作与实践
+## 5. SQL 操作与实践
 
-事务命令速查见 [[20-后端/数据库/02-MySQL常用SQL操作语句速查笔记]]；项目实践入口见 [[20-后端/实践/Node后端学习项目/01-Node后端学习项目]]。
+事务命令与实验见 [[20-后端/数据库/04-事务]]；项目实践入口见 [[20-后端/实践/Node后端学习项目/01-Node后端学习项目]]。
 
-## 参考
+## 6. 参考
 
 - [InnoDB 索引物理结构](https://dev.mysql.com/doc/refman/8.4/en/innodb-physical-structure.html)
 - [聚簇索引与二级索引](https://dev.mysql.com/doc/refman/8.4/en/innodb-index-types.html)
@@ -107,3 +107,9 @@ READ COMMITTED 和 REPEATABLE READ 隔离级别下，普通查询不会脏读其
 - [Change Buffer](https://dev.mysql.com/doc/refman/8.4/en/innodb-change-buffer.html)
 - [自动提交、提交与回滚](https://dev.mysql.com/doc/refman/8.4/en/innodb-autocommit-commit-rollback.html)
 - [redo 日志提交刷盘配置](https://dev.mysql.com/doc/refman/8.4/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit)
+
+## 阅读导航
+
+下一篇：[[20-后端/数据库/56-Migration数据库迁移]]。
+
+返回 [[20-后端/数据库/00-数据库学习导航]]。

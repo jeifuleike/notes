@@ -25,10 +25,14 @@
             "id": "b8002ecf941eb34e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ],
@@ -212,15 +216,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b8002ecf941eb34e",
+  "active": "460d35b91c4dde48",
   "lastOpenFiles": [
+    "20-后端/数据库/06-Redis.md",
+    "20-后端/数据库/02-SQL基础与数据库设计.md",
+    "20-后端/数据库/01-数据库基础.md",
+    "20-后端/实践/数据库/02-MySQL项目管理系统SQL实战12题.md",
+    "20-后端/实践/数据库/01-项目管理系统数据库实战路线.md",
+    "20-后端/数据库/05-锁与并发控制.md",
+    "20-后端/Docker/01-Docker基础与使用场景.md",
+    "20-后端/Docker",
+    "20-后端/数据库/04-事务.md",
+    "20-后端/数据库/55-InnoDB提交与刷盘.md",
+    "20-后端/数据库/08-分布式数据库.md",
+    "20-后端/数据库/07-缓存.md",
+    "file:D:/前端/project/deploy-pilot/README.md",
+    "50-每日自律/日报/2026-11/2026-11-07.md",
+    "202.md",
+    "50-每日自律/日报/2026-11/2026-11-06.md",
     "50-每日自律/日报/2026-11/2026-11-05.md",
     "50-每日自律/日报/每日成长-任务时长模板.md",
     "50-每日自律/日报/2026-11/2026-11-04.md",
     "file:D:/node/node-backend-study/labs/15a-locks/README.md",
-    "20-后端/数据库/05-锁与并发控制.md",
-    "20-后端/数据库/06-Redis.md",
-    "20-后端/数据库/07-缓存.md",
     "50-每日自律/月报/未命名.md"
   ]
 }

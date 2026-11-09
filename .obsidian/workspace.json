@@ -1,56 +1,41 @@
 {
   "main": {
-    "id": "19c2a06ca7b92575",
+    "id": "c8f3e4e166726b4a",
     "type": "split",
     "children": [
       {
-        "id": "fff9735127f88346",
+        "id": "264e9ac140d659f1",
         "type": "tabs",
         "children": [
           {
-            "id": "60853d578d4b8eb1",
+            "id": "99fd039b2c191134",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-后端/数据库/05-锁与并发控制.md",
-                "mode": "preview",
+                "file": "20-后端/数据库/06-Redis.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05-锁与并发控制"
-            }
-          },
-          {
-            "id": "b8002ecf941eb34e",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "title": "06-Redis"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "dc25291c9a8492ae",
+    "id": "7bdc8adaefb4e3e7",
     "type": "split",
     "children": [
       {
-        "id": "2fd361f8a8c0defa",
+        "id": "e9c6cb6448704620",
         "type": "tabs",
         "children": [
           {
-            "id": "c30acee07a53e84f",
+            "id": "2b7e7808ce5453c5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -65,7 +50,7 @@
             }
           },
           {
-            "id": "f865ba713e635695",
+            "id": "8b7079022eac33da",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -82,7 +67,7 @@
             }
           },
           {
-            "id": "34addf69f4640064",
+            "id": "3ff3b00f9b334538",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -98,23 +83,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 257
   },
   "right": {
-    "id": "d5694d104c2edcee",
+    "id": "d9353a67d9eb540f",
     "type": "split",
     "children": [
       {
-        "id": "a2e435253c35b30a",
+        "id": "68cdb60b90a7ffff",
         "type": "tabs",
         "children": [
           {
-            "id": "9fb5b084c96c1253",
+            "id": "029f74ee2aa0250e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
+                "file": "50-每日自律/2026-10-13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,12 +113,12 @@
             }
           },
           {
-            "id": "459f4a2fb547a10f",
+            "id": "54f98cfc4df2e1af",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
+                "file": "50-每日自律/2026-10-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -142,7 +127,7 @@
             }
           },
           {
-            "id": "dcc899232180c5c9",
+            "id": "00985da8595f7101",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -157,7 +142,7 @@
             }
           },
           {
-            "id": "d80d8f7058471815",
+            "id": "bb0d6becf9745550",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -171,12 +156,12 @@
             }
           },
           {
-            "id": "f6cab73fcee094d2",
+            "id": "cb381ce361398b2b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
+                "file": "50-每日自律/2026-10-12.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -186,7 +171,7 @@
             }
           },
           {
-            "id": "460d35b91c4dde48",
+            "id": "e336de14ebb56f34",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -204,40 +189,64 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false
+      "bases:新建数据库": false
     }
   },
-  "active": "460d35b91c4dde48",
+  "active": "99fd039b2c191134",
   "lastOpenFiles": [
-    "20-后端/数据库/06-Redis.md",
-    "20-后端/数据库/02-SQL基础与数据库设计.md",
-    "20-后端/数据库/01-数据库基础.md",
-    "20-后端/实践/数据库/02-MySQL项目管理系统SQL实战12题.md",
-    "20-后端/实践/数据库/01-项目管理系统数据库实战路线.md",
     "20-后端/数据库/05-锁与并发控制.md",
+    "20-后端/数据库/06-Redis.md",
+    "20-后端/数据库/07-缓存.md",
+    "20-后端/数据库/06-Redis-详细版.md",
+    "20-后端/Express与工程化/01-Express基础与Middleware.md",
+    "50-每日自律/日报/2026-11/2026-11-07.md",
+    "50-每日自律/日报/2026-11/2026-11-06.md",
     "20-后端/Docker/01-Docker基础与使用场景.md",
     "20-后端/Docker",
-    "20-后端/数据库/04-事务.md",
+    "file:D:/project-s/node-backend-study/doc/00-学习路线与知识地图.md",
+    "20-后端/数据库/58-数据库设计综合案例.md",
+    "20-后端/数据库/57-Repository数据访问.md",
+    "20-后端/数据库/56-Migration数据库迁移.md",
     "20-后端/数据库/55-InnoDB提交与刷盘.md",
-    "20-后端/数据库/08-分布式数据库.md",
-    "20-后端/数据库/07-缓存.md",
-    "file:D:/前端/project/deploy-pilot/README.md",
-    "50-每日自律/日报/2026-11/2026-11-07.md",
-    "202.md",
-    "50-每日自律/日报/2026-11/2026-11-06.md",
+    "20-后端/认证与安全/01-登录认证与Cookie-JWT-Session重点总结.md",
+    "20-后端/实践/数据库/01-项目管理系统数据库实战路线.md",
+    "20-后端/实践/Node后端学习项目/01-Node后端学习项目.md",
+    "20-后端/实践/数据库/02-MySQL项目管理系统SQL实战12题.md",
+    "20-后端/Node基础/01-Node-HTTP与请求响应基础.md",
+    "20-后端/Node基础/02-Stream-EventLoop与Worker.md",
+    "20-后端/00-后端学习导航.md",
+    "40-读书笔记/01-被讨厌的勇气.md",
     "50-每日自律/日报/2026-11/2026-11-05.md",
-    "50-每日自律/日报/每日成长-任务时长模板.md",
     "50-每日自律/日报/2026-11/2026-11-04.md",
-    "file:D:/node/node-backend-study/labs/15a-locks/README.md",
-    "50-每日自律/月报/未命名.md"
+    "file:D:/project/ai-market-information/docs/AI主导市场信息系统复刻方案.md",
+    "20-后端/数据库/04-事务.md",
+    "file:D:/project-sc/build-box/AGENTS.md",
+    "50-每日自律/月报",
+    "50-每日自律/日报/2026-11",
+    "50-每日自律/组件/卡片折叠/view.js",
+    "50-每日自律/组件/时间记录/view.js",
+    "50-每日自律/组件/时间记录/view.css",
+    "50-每日自律/组件/卡片折叠",
+    "50-每日自律/组件/时间记录",
+    "50-每日自律/组件",
+    "30-AI与Agent/实践/环境配置/01-AI视频生成环境.txt",
+    "10-前端/Vue原理/附件/7.png",
+    "10-前端/Vue原理/附件/6.png",
+    "10-前端/Vue原理/附件/4.png",
+    "10-前端/Vue原理/附件/5.png",
+    "10-前端/Vue原理/附件/3.png",
+    "10-前端/Vue原理/附件/2.png",
+    "10-前端/Vue原理/附件/1.png",
+    "10-前端/深入Vue原理/1.png",
+    "未命名.canvas"
   ]
 }

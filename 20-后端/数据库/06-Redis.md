@@ -1044,6 +1044,8 @@ const count = await redis.eval(`
 
 Lua 脚本执行期间，其他客户端命令不会插入脚本的执行过程。
 
+配套代码实验见 [第17a章：Redis 登录失败限制](../../../node/node-backend-study/labs/17a-login-limit/README.md)。案例复用第16章认证，附中文学习标注，串起“登录前检查 → 失败计数与阈值 → 429 / Retry-After → 成功清零 → 到期恢复”，并说明 Redis 故障返回503及并发在途请求的边界。它与第18章查询缓存的进程内熔断计数是不同能力。
+
 再看库存扣减：
 
 ``` lua

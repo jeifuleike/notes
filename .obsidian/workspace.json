@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-11.md",
+                "file": "50-每日自律/日报/2026-11/2026-11-12.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-11-11"
+              "title": "2026-11-12"
             }
           }
         ],
@@ -232,13 +232,16 @@
   },
   "active": "c249ec29a8f24ed5",
   "lastOpenFiles": [
-    "50-每日自律/日报/2026-11/2026-11-10.md",
     "50-每日自律/日报/2026-11/2026-11-11.md",
+    "50-每日自律/日报/2026-11/2026-11-12.md",
+    "20-后端/NestJS/01-NestJS启动-Controller参数与Service-.md",
+    "20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡.md",
+    "20-后端/NestJS/01-NestJS启动-Controller参数与Service.md",
+    "20-后端/NestJS/01-NestJS启动-Controller参数与Service-NestJS专项详解版.md",
+    "50-每日自律/日报/2026-11/2026-11-10.md",
     "50-每日自律/周报/周总结skill.md.md",
     "50-每日自律/月报/月复盘_2026-10.md",
     "50-每日自律/月报/月总结skill.md",
-    "20-后端/NestJS/01-NestJS启动-Controller参数与Service.md",
-    "20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡.md",
     "20-后端/实践/NestJS/01-项目任务管理API巩固计划.md",
     "20-后端/实践/NestJS",
     "20-后端/实践/数据库/02-MySQL项目管理系统SQL实战12题.md",
@@ -257,9 +260,6 @@
     "20-后端/Docker",
     "20-后端/数据库/04-事务.md",
     "20-后端/数据库/55-InnoDB提交与刷盘.md",
-    "file:D:/前端/project/deploy-pilot/README.md",
-    "202.md",
-    "50-每日自律/日报/2026-11/2026-11-06.md",
-    "50-每日自律/日报/2026-11/2026-11-05.md"
+    "file:D:/前端/project/deploy-pilot/README.md"
   ]
 }

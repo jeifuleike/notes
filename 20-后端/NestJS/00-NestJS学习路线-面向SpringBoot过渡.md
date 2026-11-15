@@ -32,7 +32,7 @@
 
 ## 3. 第01节：把接口与 Service 一起跑通
 
-学习笔记：[[20-后端/NestJS/01-NestJS启动-Controller参数与Service]]。
+学习笔记：[[20-后端/NestJS/01-NestJS启动-Controller参数与Service-]]。
 
 **本节一起学**：项目启动、Controller路由、常用HTTP装饰器、三种输入、Service职责。这里主要是把已有Express经验换成Nest写法，不逐个装饰器分节。
 
@@ -47,6 +47,8 @@
 ## 4. 第02节：Provider、依赖注入与 Module（重点）
 
 这是从Express手动组装业务转向框架管理对象的核心，需要比路由语法多花时间。
+
+学习笔记：[[20-后端/NestJS/02-Provider依赖注入与Module]]。
 
 - IoC：对象创建与组装交给容器；DI：通过构造函数接收依赖。
 - 理解 `@Injectable()`、`providers`、`controllers`、`imports`、`exports`；仅加装饰器不等于完成注册。

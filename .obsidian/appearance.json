@@ -8,5 +8,6 @@
     "stock-trading-panel",
     "hide-note-properties"
   ],
-  "monospaceFontFamily": "Cascadia Code, Consolas"
+  "monospaceFontFamily": "Cascadia Code, Consolas",
+  "showRibbon": true
 }

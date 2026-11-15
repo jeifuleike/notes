@@ -721,16 +721,37 @@ HTTP 客户端
 
 ### 十个检查自己是否真正理解的问题
 
-1. `@Controller('users')` 和 `@Get(':id')` 最终形成什么路径？
-2. `@Get(':id')` 与 `@Param('id')` 都写了 `id`，分别是什么意思？
-3. 为什么 `@Param('id') id: number` 未必是数字？
-4. `ParseIntPipe` 失败时，Controller 和 Service 会不会执行？
-5. `@Query()` 与 `@Query('name')` 返回的数据范围有什么不同？
-6. `@Body()` 收到 JSON 后，`interface` 能否保证字段合法？
-7. `Partial<CreateUserInput>` 与 `PartialType(CreateUserDto)` 有什么区别？
-8. 为什么 `@Injectable()` 后仍要写 `providers`？跨模块时怎么办？
-9. Nest 怎么知道该给 `UsersController` 注入哪个 Provider？
-10. 为什么本例 POST 后 GET 能查到新增用户，而重启后消失？
+先自己回答，再点击问题标题展开参考答案：
+
+> [!question]- 1. `@Controller('users')` 和 `@Get(':id')` 最终形成什么路径？
+> `@Controller('users')` 提供控制器级的 `/users` 前缀，`@Get(':id')` 再声明 GET 方法和 `/:id` 动态路径段，两者组合成 `GET /users/:id`。例如客户端请求 `GET /users/1` 时，`1` 会匹配动态段 `:id`。
+
+> [!question]- 2. `@Get(':id')` 与 `@Param('id')` 都写了 `id`，分别是什么意思？
+> `@Get(':id')` 中的 `:id` 是在声明路由里有一个名为 `id` 的动态占位符；`@Param('id')` 中的 `'id'` 表示从当前请求的路径参数中读取这个占位符。方法参数名可以改成 `userId` 等，只要读取名称仍是 `id`。
+
+> [!question]- 3. 为什么 `@Param('id') id: number` 未必是数字？
+> HTTP 路径参数最初是字符串，TypeScript 的 `number` 标注只在编译阶段检查代码，编译后会被擦除，不会转换真实请求。没有配置 Pipe 时，即使写的是 `id: number`，运行时仍可能得到字符串 `"1"`。`ParseIntPipe` 才负责在调用方法前把它转换成整数 `1`。
+
+> [!question]- 4. `ParseIntPipe` 失败时，Controller 和 Service 会不会执行？
+> 都不会执行。Pipe 在 Controller 方法被调用之前运行；例如 `/users/abc` 无法解析为整数时，`ParseIntPipe` 先抛出参数解析异常，Nest 返回 400，`findOne()` 和它调用的 Service 方法都不会进入。若 ID 格式合法但记录不存在，则会进入 Controller 和 Service，再由 Service 中的 `NotFoundException` 形成 404。
+
+> [!question]- 5. `@Query()` 与 `@Query('name')` 返回的数据范围有什么不同？
+> `@Query()` 把当前请求的全部查询参数作为一个对象传给方法；`@Query('name')` 只取查询参数中的 `name` 字段，并直接把它交给这个参数。没有 `name` 时通常得到 `undefined`，请求中的其他查询字段也不会因这个单字段装饰器而自动进入方法。
+
+> [!question]- 6. `@Body()` 收到 JSON 后，`interface` 能否保证字段合法？
+> 不能。`@Body()` 负责把 HTTP 适配器解析后的 JSON 对象交给方法，`interface` 只在 TypeScript 编译期描述数据形状，运行时会被擦除。字段类型、缺失字段和多余字段都需要额外的运行时验证；本节尚未加入 DTO 类与 `ValidationPipe`，因此不能把类型标注当作输入合法性保证。
+
+> [!question]- 7. `Partial<CreateUserInput>` 与 `PartialType(CreateUserDto)` 有什么区别？
+> `Partial<CreateUserInput>` 是 TypeScript 工具类型，把现有类型的字段设为可选，主要影响编译期检查；`PartialType(CreateUserDto)` 来自 Nest 映射类型工具，会生成可参与运行时验证的 DTO 类，并继承原 DTO 上的验证元数据。更新接口通常使用后一种，这样可选字段仍能经过 `ValidationPipe` 的运行时规则，但两者都只处理“可选”，不会自行补齐未提交的字段。
+
+> [!question]- 8. 为什么 `@Injectable()` 后仍要写 `providers`？跨模块时怎么办？
+> `@Injectable()` 只标记该类可以参与 Nest 的依赖注入并提供相关元数据，不会自动把实例放进容器；当前模块还需要在 `providers` 中注册它。其他模块要注入这个 Provider 时，提供方模块通常需用 `exports` 公开它，使用方模块再用 `imports` 导入提供方模块。也可以在适用场景下使用全局模块，但显式导入和导出更容易看清依赖边界。
+
+> [!question]- 9. Nest 怎么知道该给 `UsersController` 注入哪个 Provider？
+> 容器按注入 token 查找 Provider。本例通过 `@Inject(UsersService)` 明确指定以 `UsersService` 类作为 token，而根模块的 `providers: [UsersService]` 注册的正是同一个 token。支持构造参数类型元数据的 Nest 工程也可根据类型推断 token；无论哪种写法，Provider 都必须已在当前模块可见并能由容器解析。
+
+> [!question]- 10. 为什么本例 POST 后 GET 能查到新增用户，而重启后消失？
+> 默认作用域的 Provider 在应用进程内通常复用同一个 `UsersService` 实例。POST 调用的 `create()` 会把新用户 `push` 进这个实例的 `users` 数组，后续 GET 通过同一个实例读取，因此能查到新增数据。数组只保存在进程内存中；重启应用（包括开发模式因改代码触发的重启）会创建新实例并恢复初始数据，因此新用户消失。
 
 能够自己用代码举例回答这些问题，才建议进入下一节 Provider、依赖注入与 Module 的深入内容。
 

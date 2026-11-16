@@ -443,12 +443,12 @@ constructor(private readonly usersRepository: UsersRepository) {}
 
 普通类可以直接放入 `providers`。需要把某个 token 绑定到其他实现或值时，就使用 Provider 对象。
 
-| 写法 | 值从哪里来 | 常见用途 |
-| --- | --- | --- |
-| `useClass` | Nest 实例化指定类 | 用不同实现满足同一个接口 token |
-| `useValue` | 直接使用一个已经存在的值或对象 | 常量、配置对象、测试替身 |
-| `useFactory` | 调用函数并用返回值创建依赖 | 需要条件判断、组合资源或异步初始化 |
-| `useExisting` | 指向另一个已注册 Provider | 给同一个实例增加别名 |
+| 写法            | 值从哪里来             | 常见用途               |
+| ------------- | ----------------- | ------------------ |
+| `useClass`    | Nest 实例化指定类       | 用不同实现满足同一个接口 token |
+| `useValue`    | 直接使用一个已经存在的值或对象   | 常量、配置对象、测试替身       |
+| `useFactory`  | 调用函数并用返回值创建依赖     | 需要条件判断、组合资源或异步初始化  |
+| `useExisting` | 指向另一个已注册 Provider | 给同一个实例增加别名         |
 
 本节核心写法：
 
@@ -667,7 +667,7 @@ InMemoryUsersRepository
 - [ ] 能替换 Repository 实现而保持 Controller 的用户接口调用不变。
 - [ ] 能解释默认 Provider 的共享状态，不把当前用户等请求数据放进普通 singleton。
 
-完成后进入路线中的第03节：DTO、Pipe、校验与统一异常。所有验收项仅用于学习核对，不自动标记为已完成。
+完成后进入第03节：[[20-后端/NestJS/03-DTO校验Pipe与统一异常]]。所有验收项仅用于学习核对，不自动标记为已完成。
 
 返回：[[20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡]]、[[20-后端/00-后端学习导航]]。
 

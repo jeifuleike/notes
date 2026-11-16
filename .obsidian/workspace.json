@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-后端/数据库/05-锁与并发控制.md",
+                "file": "50-每日自律/日报/2026-11/2026-11-16.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05-锁与并发控制"
+              "title": "2026-11-16"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "80-Skill库/00-索引.md",
+                "file": "90-知识系统/设计.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00-索引"
+              "title": "设计"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 423
   },
   "right": {
     "id": "d5694d104c2edcee",
@@ -216,8 +215,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b8002ecf941eb34e",
+  "active": "60853d578d4b8eb1",
   "lastOpenFiles": [
+    "50-每日自律/日报/2026-11/2026-11-15.md",
+    "50-每日自律/日报/2026-11/2026-11-16.md",
+    "20-后端/NestJS/03-DTO校验Pipe与统一异常.md",
+    "20-后端/Express与工程化/04-运行时校验与配置管理.md",
+    "20-后端/数据库/05-锁与并发控制.md",
+    "90-知识系统/设计.md",
+    "90-知识系统/安装/qmd.md",
+    "90-知识系统/模板/工作流规范.md",
+    "90-知识系统/审计/2026-11.md",
+    "90-知识系统/prompts/AGENTS.global.md",
+    "90-知识系统/使用说明.md",
+    "00-知识库首页.md",
+    "90-知识系统/处理日志.md",
+    "愿你披荆斩棘，磨炼勇气，探索无尽的知识，成为一个值得被世界温柔以待的人！.md",
+    "20-后端/NestJS/13-Nest常用装饰器分类速查.md",
+    "80-Skill库/00-索引.md",
     "80-Skill库/Codex备份/skills/kb-curator/references/audit.md",
     "80-Skill库/Codex备份/skills/kb-curator/references/publish.md",
     "80-Skill库/Codex备份/skills/kb-curator/references/triage.md",
@@ -228,7 +243,6 @@
     "80-Skill库/Codex备份/skills/kb-curator/references/routing.md",
     "80-Skill库/Codex备份/skills/kb-curator/references/capture-rules.md",
     "80-Skill库/Codex备份/skills/codex-asset-sync/references/sync-policy.md",
-    "90-知识系统/安装/qmd.md",
     "80-Skill库/Codex备份/manifest.json",
     "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/__pycache__/sync_codex_assets.cpython-312.pyc",
     "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/__pycache__",
@@ -238,21 +252,6 @@
     "80-Skill库/Codex备份/skills/kb-curator/references",
     "80-Skill库/Codex备份/skills/codex-asset-sync/agents",
     "80-Skill库/Codex备份/skills/kb-query/references",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/references",
-    "90-知识系统/审计/2026-11.md",
-    "50-每日自律/日报/2026-11/2026-11-08.md",
-    "80-Skill库/00-索引.md",
-    "90-知识系统/skills/codex-asset-sync/references/sync-policy.md",
-    "90-知识系统/skills/codex-asset-sync/SKILL.md",
-    "00-知识库首页.md",
-    "90-知识系统/prompts/AGENTS.global.md",
-    "50-每日自律/日报/2026-11/2026-11-16.md",
-    "00-Inbox/已归档/2026-11/2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法.md",
-    "00-Inbox/2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法.md",
-    "70-AI知识资产/工作流规范/05-搭建新知识库.md",
-    "70-AI知识资产/项目上下文/01-个人知识库.md",
-    "50-每日自律/日报/2026-11/2026-11-15.md",
-    "50-每日自律/日报/2026-11/2026-11-17.md",
-    "50-每日自律/日报/2026-11/2026-11-14.md"
+    "80-Skill库/Codex备份/skills/codex-asset-sync/references"
   ]
 }

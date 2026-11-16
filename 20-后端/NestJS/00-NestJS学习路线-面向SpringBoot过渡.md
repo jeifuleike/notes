@@ -30,6 +30,8 @@
 
 项目阶段的具体安排见 [[20-后端/实践/NestJS/01-项目任务管理API巩固计划]]。
 
+装饰器速查：[[20-后端/NestJS/13-Nest常用装饰器分类速查]]。按作用位置分类，配合第01～07节随时查阅，不单独占用学习日。
+
 ## 3. 第01节：把接口与 Service 一起跑通
 
 学习笔记：[[20-后端/NestJS/01-NestJS启动-Controller参数与Service-]]。
@@ -60,6 +62,8 @@
 参考：[Providers](https://docs.nestjs.com/providers)、[Modules](https://docs.nestjs.com/modules)、[自定义Provider](https://docs.nestjs.com/fundamentals/custom-providers)。
 
 ## 5. 第03节：DTO、校验、Pipe 与统一异常
+
+学习笔记：[[20-后端/NestJS/03-DTO校验Pipe与统一异常]]。
 
 围绕“非法输入进不去、错误响应说清楚”一起练，不把DTO、每个校验装饰器和每种异常再拆成多天。
 

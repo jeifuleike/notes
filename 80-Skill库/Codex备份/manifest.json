@@ -1,0 +1,30 @@
+{
+  "updated_at": "2026-11-16T22:11:32+08:00",
+  "changed": [
+    "skills/kb-curator",
+    "skills/kb-query",
+    "skills/codex-asset-sync",
+    "prompts/AGENTS.global.md"
+  ],
+  "prompt_sha256": "9e69047a85c61812ec89542b1797357627c6e596f2b28eab2893a74eabf2b19f",
+  "skills": {
+    "kb-curator": {
+      "references/audit.md": "b21a315881bb16bb7bb096e1d7037a3b95243302bc83ae5420f0fd66fbbf0d46",
+      "references/capture-rules.md": "f64e17a4b4539d5e8488f2818f4e2a971cc34801d65812d8195967f8fdd292e9",
+      "references/publish.md": "5f885312e1bf06c46d0b55acaffff73735367fce1cf9d3b111c39a5aab0f18ce",
+      "references/routing.md": "6ea4fc8c8b17a22ef2a4c612e09316430572350b440c0f16cda455d4caaa66ae",
+      "references/triage.md": "5e9e99ce0ef51792b0d4521596ffb10b5d0ee5133141e440bbc7d1aeeccd088e",
+      "SKILL.md": "6845004c6cca19f3c791357e29415d5486d3e58f0e6304f7e3e3b8063e475307"
+    },
+    "kb-query": {
+      "references/search.md": "49a929372bd95bb51428ab0db5db6ef71d6352283fa9fec280d241ac6e7d7b1e",
+      "SKILL.md": "c0898f53861b83e6c8b5b2b0b673fe695649434524ecaf7ed0c47fb50ba72a02"
+    },
+    "codex-asset-sync": {
+      "agents/openai.yaml": "e85b596fa419cbb217b97b15109b03d52313c8abbd585c63f5dade3559041119",
+      "references/sync-policy.md": "7aa7df47a3ebf19adf8c012ce8958d648552ac56863c639c411e25f0f5f8f62f",
+      "scripts/sync_codex_assets.py": "4368cbbeb4d68ea7887c42fe3f6d4672578172ad9f28b54682121e096aa3aa17",
+      "SKILL.md": "0a27c9a9d69c353ba99eaee5f7100890d657648533a6d3242a9fe3210372fb1d"
+    }
+  }
+}

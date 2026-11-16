@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "vault": "D:\\notes",
+  "scope": "all-projects",
+  "cooldown_minutes": 20,
+  "min_chars": 80
+}
+

@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\<you>\\.codex\\hooks\\kb-capture-ask.py\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
+

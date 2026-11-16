@@ -27,30 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-08.md",
+                "file": "80-Skill库/00-索引.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-11-08"
-            }
-          },
-          {
-            "id": "1b21c3fe930b54a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20-后端/NestJS/02-Provider依赖注入与Module.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "02-Provider依赖注入与Module"
+              "title": "00-索引"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,36 +216,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1b21c3fe930b54a4",
+  "active": "b8002ecf941eb34e",
   "lastOpenFiles": [
-    "20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡.md",
-    "20-后端/NestJS/02-Provider依赖注入与Module.md",
-    "20-后端/NestJS/01-NestJS启动-Controller参数与Service-.md",
-    "file:D:/steam/steamapps/common/Mayday Airways Demo/README.md",
-    "50-每日自律/日报/2026-11/2026-11-11.md",
-    "50-每日自律/日报/2026-11/2026-11-12.md",
-    "20-后端/NestJS/01-NestJS启动-Controller参数与Service.md",
-    "20-后端/NestJS/01-NestJS启动-Controller参数与Service-NestJS专项详解版.md",
-    "50-每日自律/日报/2026-11/2026-11-10.md",
-    "50-每日自律/周报/周总结skill.md.md",
-    "50-每日自律/月报/月复盘_2026-10.md",
-    "50-每日自律/月报/月总结skill.md",
-    "20-后端/实践/NestJS/01-项目任务管理API巩固计划.md",
-    "20-后端/实践/NestJS",
-    "20-后端/实践/数据库/02-MySQL项目管理系统SQL实战12题.md",
-    "20-后端/数据库/07-缓存.md",
-    "20-后端/NestJS",
-    "20-后端/Docker/01-Docker基础与使用场景.md",
-    "50-每日自律/日报/2026-11/2026-11-09.md",
-    "20-后端/数据库/08-分布式数据库.md",
+    "80-Skill库/Codex备份/skills/kb-curator/references/audit.md",
+    "80-Skill库/Codex备份/skills/kb-curator/references/publish.md",
+    "80-Skill库/Codex备份/skills/kb-curator/references/triage.md",
+    "80-Skill库/Codex备份/skills/kb-curator/SKILL.md",
+    "80-Skill库/Codex备份/skills/kb-query/references/search.md",
+    "80-Skill库/Codex备份/skills/kb-query/SKILL.md",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/SKILL.md",
+    "80-Skill库/Codex备份/skills/kb-curator/references/routing.md",
+    "80-Skill库/Codex备份/skills/kb-curator/references/capture-rules.md",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/references/sync-policy.md",
+    "90-知识系统/安装/qmd.md",
+    "80-Skill库/Codex备份/manifest.json",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/__pycache__/sync_codex_assets.cpython-312.pyc",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/__pycache__",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/sync_codex_assets.py",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/agents/openai.yaml",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts",
+    "80-Skill库/Codex备份/skills/kb-curator/references",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/agents",
+    "80-Skill库/Codex备份/skills/kb-query/references",
+    "80-Skill库/Codex备份/skills/codex-asset-sync/references",
+    "90-知识系统/审计/2026-11.md",
     "50-每日自律/日报/2026-11/2026-11-08.md",
-    "50-每日自律/日报/2026-11/2026-11-07.md",
-    "20-后端/数据库/06-Redis.md",
-    "20-后端/数据库/02-SQL基础与数据库设计.md",
-    "20-后端/数据库/01-数据库基础.md",
-    "20-后端/实践/数据库/01-项目管理系统数据库实战路线.md",
-    "20-后端/数据库/05-锁与并发控制.md",
-    "20-后端/Docker",
-    "20-后端/数据库/04-事务.md"
+    "80-Skill库/00-索引.md",
+    "90-知识系统/skills/codex-asset-sync/references/sync-policy.md",
+    "90-知识系统/skills/codex-asset-sync/SKILL.md",
+    "00-知识库首页.md",
+    "90-知识系统/prompts/AGENTS.global.md",
+    "50-每日自律/日报/2026-11/2026-11-16.md",
+    "00-Inbox/已归档/2026-11/2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法.md",
+    "00-Inbox/2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法.md",
+    "70-AI知识资产/工作流规范/05-搭建新知识库.md",
+    "70-AI知识资产/项目上下文/01-个人知识库.md",
+    "50-每日自律/日报/2026-11/2026-11-15.md",
+    "50-每日自律/日报/2026-11/2026-11-17.md",
+    "50-每日自律/日报/2026-11/2026-11-14.md"
   ]
 }

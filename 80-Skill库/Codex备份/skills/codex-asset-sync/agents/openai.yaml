@@ -1,0 +1,4 @@
+interface:
+  display_name: Codex Asset Sync
+  short_description: 备份、比较和恢复 Codex Skills 与提示词
+  default_prompt: 检查 Codex 资产与 notes 备份的差异，并在确认后同步。

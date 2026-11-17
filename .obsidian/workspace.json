@@ -25,14 +25,14 @@
             "id": "e1e0ae0a85a80458",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "00-NestJS学习路线-面向SpringBoot过渡"
             }
           }
         ],
@@ -216,8 +216,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "e336de14ebb56f34",
+  "active": "e1e0ae0a85a80458",
   "lastOpenFiles": [
+    "00-Inbox/2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法.md",
+    "00-Inbox/00-收集箱.md",
     "90-知识系统/模板/QuickAdd收集.md",
     "70-AI知识资产/工作流规范/04-Skill评估与接入.md",
     "70-AI知识资产/工作流规范/03-排障与根因分析.md",
@@ -252,8 +254,6 @@
     "80-Skill库/Codex备份/skills/kb-curator/references/publish.md",
     "80-Skill库/Codex备份/skills/kb-curator/references/capture-rules.md",
     "80-Skill库/Codex备份/skills/kb-curator/references/audit.md",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/references/sync-policy.md",
-    "80-Skill库/Codex备份/skills/kb-query/SKILL.md",
     "10-前端/Vue原理/附件/7.png",
     "10-前端/Vue原理/附件/6.png",
     "10-前端/Vue原理/附件/4.png",

@@ -1,55 +1,56 @@
 {
   "main": {
-    "id": "19c2a06ca7b92575",
+    "id": "c8f3e4e166726b4a",
     "type": "split",
     "children": [
       {
-        "id": "fff9735127f88346",
+        "id": "5e4e6c786aa5d1b5",
         "type": "tabs",
         "children": [
           {
-            "id": "60853d578d4b8eb1",
+            "id": "6dd31957b0a5171b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-16.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-11-16"
-            }
-          },
-          {
-            "id": "b8002ecf941eb34e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "90-知识系统/设计.md",
+                "file": "20-后端/NestJS/03-DTO校验Pipe与统一异常.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "设计"
+              "title": "03-DTO校验Pipe与统一异常"
+            }
+          },
+          {
+            "id": "e1e0ae0a85a80458",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "dc25291c9a8492ae",
+    "id": "7bdc8adaefb4e3e7",
     "type": "split",
     "children": [
       {
-        "id": "2fd361f8a8c0defa",
+        "id": "e9c6cb6448704620",
         "type": "tabs",
         "children": [
           {
-            "id": "c30acee07a53e84f",
+            "id": "2b7e7808ce5453c5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -64,7 +65,7 @@
             }
           },
           {
-            "id": "f865ba713e635695",
+            "id": "8b7079022eac33da",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -81,7 +82,7 @@
             }
           },
           {
-            "id": "34addf69f4640064",
+            "id": "3ff3b00f9b334538",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -97,23 +98,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 423
+    "width": 257
   },
   "right": {
-    "id": "d5694d104c2edcee",
+    "id": "d9353a67d9eb540f",
     "type": "split",
     "children": [
       {
-        "id": "a2e435253c35b30a",
+        "id": "68cdb60b90a7ffff",
         "type": "tabs",
         "children": [
           {
-            "id": "9fb5b084c96c1253",
+            "id": "029f74ee2aa0250e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
+                "file": "50-每日自律/2026-10-13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,12 +128,12 @@
             }
           },
           {
-            "id": "459f4a2fb547a10f",
+            "id": "54f98cfc4df2e1af",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
+                "file": "50-每日自律/2026-10-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -141,7 +142,7 @@
             }
           },
           {
-            "id": "dcc899232180c5c9",
+            "id": "00985da8595f7101",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -156,7 +157,7 @@
             }
           },
           {
-            "id": "d80d8f7058471815",
+            "id": "bb0d6becf9745550",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -170,12 +171,12 @@
             }
           },
           {
-            "id": "f6cab73fcee094d2",
+            "id": "cb381ce361398b2b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
+                "file": "50-每日自律/2026-10-12.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -185,7 +186,7 @@
             }
           },
           {
-            "id": "460d35b91c4dde48",
+            "id": "e336de14ebb56f34",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -203,55 +204,64 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false
+      "bases:新建数据库": false
     }
   },
-  "active": "60853d578d4b8eb1",
+  "active": "e336de14ebb56f34",
   "lastOpenFiles": [
-    "50-每日自律/日报/2026-11/2026-11-15.md",
-    "50-每日自律/日报/2026-11/2026-11-16.md",
-    "20-后端/NestJS/03-DTO校验Pipe与统一异常.md",
-    "20-后端/Express与工程化/04-运行时校验与配置管理.md",
-    "20-后端/数据库/05-锁与并发控制.md",
-    "90-知识系统/设计.md",
-    "90-知识系统/安装/qmd.md",
+    "90-知识系统/模板/QuickAdd收集.md",
+    "70-AI知识资产/工作流规范/04-Skill评估与接入.md",
+    "70-AI知识资产/工作流规范/03-排障与根因分析.md",
+    "file:D:/project/ai-market-information/docs/workflows/multi-agent.zh-CN.md",
+    "90-知识系统/脚本/tests/test_kb.py",
+    "90-知识系统/脚本/tests/test_codex_asset_sync.py",
+    "90-知识系统/模板/收集.md",
+    "90-知识系统/模板/每日成长-任务时长模板.md",
     "90-知识系统/模板/工作流规范.md",
+    "90-知识系统/模板/审核报告.md",
+    "90-知识系统/模板/休息日-任务时长模板.md",
+    "90-知识系统/模板/人读笔记.md",
+    "90-知识系统/模板/Skill评估.md",
+    "90-知识系统/模板/AI操作卡.md",
+    "90-知识系统/脚本/tests",
+    "90-知识系统/脚本/kb.py",
+    "90-知识系统/安装/kb-capture.example.json",
+    "90-知识系统/安装/qmd.md",
+    "90-知识系统/安装/install-codex-kb.ps1",
+    "90-知识系统/安装/hooks.example.json",
+    "90-知识系统/安装/kb-capture-ask.py",
+    "90-知识系统/安装/daily-note.ps1",
     "90-知识系统/审计/2026-11.md",
     "90-知识系统/prompts/AGENTS.global.md",
-    "90-知识系统/使用说明.md",
-    "00-知识库首页.md",
+    "90-知识系统/设计.md",
+    "90-知识系统/模板",
     "90-知识系统/处理日志.md",
-    "愿你披荆斩棘，磨炼勇气，探索无尽的知识，成为一个值得被世界温柔以待的人！.md",
-    "20-后端/NestJS/13-Nest常用装饰器分类速查.md",
-    "80-Skill库/00-索引.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/audit.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/publish.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/triage.md",
-    "80-Skill库/Codex备份/skills/kb-curator/SKILL.md",
+    "90-知识系统/使用说明.md",
     "80-Skill库/Codex备份/skills/kb-query/references/search.md",
-    "80-Skill库/Codex备份/skills/kb-query/SKILL.md",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/SKILL.md",
+    "80-Skill库/Codex备份/skills/kb-curator/references/triage.md",
     "80-Skill库/Codex备份/skills/kb-curator/references/routing.md",
+    "80-Skill库/Codex备份/skills/kb-curator/references/publish.md",
     "80-Skill库/Codex备份/skills/kb-curator/references/capture-rules.md",
+    "80-Skill库/Codex备份/skills/kb-curator/references/audit.md",
     "80-Skill库/Codex备份/skills/codex-asset-sync/references/sync-policy.md",
-    "80-Skill库/Codex备份/manifest.json",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/__pycache__/sync_codex_assets.cpython-312.pyc",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/__pycache__",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/sync_codex_assets.py",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/agents/openai.yaml",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts",
-    "80-Skill库/Codex备份/skills/kb-curator/references",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/agents",
-    "80-Skill库/Codex备份/skills/kb-query/references",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/references"
+    "80-Skill库/Codex备份/skills/kb-query/SKILL.md",
+    "10-前端/Vue原理/附件/7.png",
+    "10-前端/Vue原理/附件/6.png",
+    "10-前端/Vue原理/附件/4.png",
+    "10-前端/Vue原理/附件/5.png",
+    "10-前端/Vue原理/附件/3.png",
+    "10-前端/Vue原理/附件/2.png",
+    "10-前端/Vue原理/附件/1.png",
+    "10-前端/深入Vue原理/1.png",
+    "未命名.canvas"
   ]
 }

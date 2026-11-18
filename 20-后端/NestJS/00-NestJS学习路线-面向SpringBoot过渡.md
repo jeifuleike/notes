@@ -80,6 +80,8 @@
 
 本节直接把内存用户接口改成数据库接口，继续用熟悉的mysql2和参数化SQL，不同时学习ORM。
 
+学习笔记：[[20-后端/NestJS/04-配置MySQL与Repository]]。
+
 - 配置集中读取，必要配置启动时校验，代码中不写真实密钥。
 - 用工厂Provider提供共享连接池，Repository注入使用；理解应用关闭时释放资源。
 - Service组织业务，Repository负责SQL；不为每个请求创建连接池。

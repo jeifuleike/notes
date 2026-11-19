@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "19c2a06ca7b92575",
+    "id": "4337e9164562e307",
     "type": "split",
     "children": [
       {
-        "id": "fff9735127f88346",
+        "id": "0986ce72fd0eabfc",
         "type": "tabs",
         "children": [
           {
-            "id": "b8002ecf941eb34e",
+            "id": "5b3f7c3127d78ac1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20-后端/NestJS/04-配置MySQL与Repository.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "04-配置MySQL与Repository"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "dc25291c9a8492ae",
+    "id": "eb83ab2fd645ff76",
     "type": "split",
     "children": [
       {
-        "id": "2fd361f8a8c0defa",
+        "id": "3d7b67b365eed9e1",
         "type": "tabs",
         "children": [
           {
-            "id": "c30acee07a53e84f",
+            "id": "0d3aae728a8ed359",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -50,7 +46,7 @@
             }
           },
           {
-            "id": "f865ba713e635695",
+            "id": "893d4e70da6b86c7",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -67,7 +63,7 @@
             }
           },
           {
-            "id": "34addf69f4640064",
+            "id": "3d067caa0901db84",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -83,23 +79,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 420
+    "width": 300
   },
   "right": {
-    "id": "d5694d104c2edcee",
+    "id": "500712442dbaa856",
     "type": "split",
     "children": [
       {
-        "id": "a2e435253c35b30a",
+        "id": "6a481eb1a261ec40",
         "type": "tabs",
         "children": [
           {
-            "id": "9fb5b084c96c1253",
+            "id": "8ea6e2c5b15d8e0e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,12 +108,11 @@
             }
           },
           {
-            "id": "459f4a2fb547a10f",
+            "id": "e9e3965e3f568580",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -127,7 +121,7 @@
             }
           },
           {
-            "id": "dcc899232180c5c9",
+            "id": "210952a01d95c0e6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -142,7 +136,7 @@
             }
           },
           {
-            "id": "d80d8f7058471815",
+            "id": "e5ec15a40e7d4eed",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -156,12 +150,11 @@
             }
           },
           {
-            "id": "f6cab73fcee094d2",
+            "id": "ba88b013a7f20031",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-05.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -171,7 +164,7 @@
             }
           },
           {
-            "id": "460d35b91c4dde48",
+            "id": "f9effa88507f8133",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -201,43 +194,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b8002ecf941eb34e",
+  "active": "f9effa88507f8133",
   "lastOpenFiles": [
-    "20-后端/NestJS/03-DTO校验Pipe与统一异常.md",
-    "20-后端/NestJS/04-配置MySQL与Repository.md",
-    "20-后端/00-后端学习导航.md",
-    "90-知识系统/设计.md",
-    "50-每日自律/日报/2026-11/2026-11-16.md",
-    "50-每日自律/日报/2026-11/2026-11-15.md",
-    "20-后端/Express与工程化/04-运行时校验与配置管理.md",
-    "20-后端/数据库/05-锁与并发控制.md",
-    "90-知识系统/安装/qmd.md",
-    "90-知识系统/模板/工作流规范.md",
-    "90-知识系统/审计/2026-11.md",
-    "90-知识系统/prompts/AGENTS.global.md",
-    "90-知识系统/使用说明.md",
-    "00-知识库首页.md",
-    "90-知识系统/处理日志.md",
-    "愿你披荆斩棘，磨炼勇气，探索无尽的知识，成为一个值得被世界温柔以待的人！.md",
+    "50-每日自律/日报/2026-11/2026-11-19.md",
+    "20-后端/Java/01-从TypeScript到Java-编译与运行.md",
+    "20-后端/Java/00-Java后端学习路线.md",
+    "20-后端/Java/AGENTS.md",
+    "20-后端/NestJS/06-Guard与Interceptor的请求链.md",
+    "20-后端/Java",
     "20-后端/NestJS/13-Nest常用装饰器分类速查.md",
-    "80-Skill库/00-索引.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/audit.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/publish.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/triage.md",
-    "80-Skill库/Codex备份/skills/kb-curator/SKILL.md",
-    "80-Skill库/Codex备份/skills/kb-query/references/search.md",
-    "80-Skill库/Codex备份/skills/kb-query/SKILL.md",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/SKILL.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/routing.md",
-    "80-Skill库/Codex备份/manifest.json",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/__pycache__/sync_codex_assets.cpython-312.pyc",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/__pycache__",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts/sync_codex_assets.py",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/agents/openai.yaml",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/scripts",
-    "80-Skill库/Codex备份/skills/kb-curator/references",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/agents",
-    "80-Skill库/Codex备份/skills/kb-query/references",
-    "80-Skill库/Codex备份/skills/codex-asset-sync/references"
+    "20-后端/Node基础/01-Node-HTTP与请求响应基础.md",
+    "20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡.md",
+    "20-后端/NestJS/05-事务与多表业务.md",
+    "_tmp_42648_80a4fab8a43072a27e06fbbf84e93e6e",
+    "20-后端/NestJS/04-配置MySQL与Repository.md",
+    "50-每日自律/日报/2026-11/2026-11-18.md",
+    "50-每日自律/日报/2026-11/2026-11-17.md",
+    "50-每日自律/日报/2026-11/2026-11-16.md"
   ]
 }

@@ -60,6 +60,6 @@ Pipe 是 Nest 在调用 Controller 方法**之前**处理参数的一种机制�
 
 把这几个概念连起来读一次：**DTO 上写着“邮箱要合法”，ValidationPipe 在请求到来时检查，不合法就抛异常，Nest 把异常回复给调用方。** 自定义 Filter 是最后一步可以选择的扩展。
 
-上一节 [[20-后端/NestJS/02-Provider依赖注入与Module]] · 下一节 [[20-后端/NestJS/04-配置MySQL与Repository]] · [[20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡|学习路线]]
+上一节 [[20-后端/NestJS/02-Provider依赖注入与Module]] · [[20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡|下一步：请求链收尾练习]] · [[20-后端/NestJS/04-配置MySQL与Repository|查阅：配置 MySQL 与 Repository]]
 
 相关笔记：[[20-后端/Express与工程化/04-运行时校验与配置管理]]、[[20-后端/Express与工程化/03-统一异常处理与工程化]]。

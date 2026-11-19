@@ -1,6 +1,6 @@
 # 附录：NestJS 常用装饰器分类速查
 
-> 用途：看到 `@xxx` 时，先判断它挂在哪里、由谁执行、什么时候执行。学习顺序仍是 01～12 节；本篇是查阅用的附录，不要求按字母背。
+> 用途：看到 `@xxx` 时，先判断它挂在哪里、由谁执行、什么时候执行。本篇供按需查阅，当前学习顺序见 [[20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡]]。
 
 ## 1. 先分清装饰器的来源
 
@@ -154,7 +154,7 @@ Pipe 按书写顺序执行，`DefaultValuePipe` 必须在 `ParseIntPipe` 前面�
 
 - Guard 在 Pipe 之前，所以认证失败时不会先跑 DTO 校验。
 - 多个 Guard 按绑定顺序执行，先认证再角色检查。
-- Interceptor 的“后置”代码在 handler 抛错时不会执行，除非用 `catchError` 处理。
+- Interceptor 中，`tap({ next })` 观察成功值，`catchError` 可处理下游异常，`finalize` 在成功、失败或取消订阅时都会执行。
 - Filter 不是链条末端的一步，而是包住整条链的错误出口。
 - 全局注册用 `app.useGlobalGuards(...)` 等；需要注入依赖时改用 `APP_GUARD`、`APP_INTERCEPTOR`、`APP_PIPE`、`APP_FILTER`。
 

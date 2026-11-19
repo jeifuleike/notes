@@ -22,21 +22,77 @@
             }
           },
           {
+            "id": "62a2b298ac09b44a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "file:D:/project/ai-market-information/docs/records/features/M03-five-category-home.zh-CN.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "M03-five-category-home.zh-CN"
+            }
+          },
+          {
             "id": "e1e0ae0a85a80458",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡.md",
+                "file": "90-知识系统/使用说明.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00-NestJS学习路线-面向SpringBoot过渡"
+              "title": "使用说明"
+            }
+          },
+          {
+            "id": "de6e24f58a1dd7fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "file:D:/project/ai-market-information/docs/records/features/M04-category-app-catalog.zh-CN.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "M04-category-app-catalog.zh-CN"
+            }
+          },
+          {
+            "id": "9c5463bf93d0a68d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "file:D:/project/ai-market-information/docs/records/features/M05-launch-protocol.zh-CN.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "M05-launch-protocol.zh-CN"
+            }
+          },
+          {
+            "id": "54d86a1572b8433b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00-Inbox/2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -98,7 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257
+    "width": 325
   },
   "right": {
     "id": "d9353a67d9eb540f",
@@ -216,44 +272,44 @@
       "bases:新建数据库": false
     }
   },
-  "active": "e1e0ae0a85a80458",
+  "active": "54d86a1572b8433b",
   "lastOpenFiles": [
-    "00-Inbox/2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法.md",
+    "00-Inbox/附件/write-notes-like-deepseek/scripts/verify-archived-agent-notes.ts",
+    "00-Inbox/附件/write-notes-like-deepseek/scripts/verify-agent-note-format.ts",
+    "00-Inbox/附件/write-notes-like-deepseek/scripts/verify-agent-note-tree.ts",
+    "00-Inbox/附件/write-notes-like-deepseek/scripts/agent-note-tree.ts",
+    "00-Inbox/附件/write-notes-like-deepseek/scripts",
+    "00-Inbox/2026-11-19-工程决策记录与流转.md",
+    "00-Inbox/2026-11-19-多 Agent 协作与任务交接.md",
+    "00-Inbox/2026-11-19-功能开发与验收.md",
+    "00-Inbox/2026-11-19-前端 TypeScript 开发规范.md",
+    "00-Inbox/附件/write-notes-like-deepseek/templates/rejected.md",
+    "00-Inbox/附件/write-notes-like-deepseek/templates/implemented.md",
+    "00-Inbox/附件/write-notes-like-deepseek/templates/proposed.md",
+    "00-Inbox/附件/write-notes-like-deepseek/templates/notes-README.md",
+    "00-Inbox/附件/write-notes-like-deepseek/templates",
+    "00-Inbox/附件/write-notes-like-deepseek/SKILL.md",
+    "00-Inbox/附件/write-notes-like-deepseek",
+    "00-Inbox/附件/multi-agent-collaboration/SKILL.md",
+    "00-Inbox/附件/multi-agent-collaboration",
+    "00-Inbox/附件/feature-delivery/SKILL.md",
+    "00-Inbox/附件/feature-delivery",
+    "00-Inbox/附件/frontend-ts-standards/references/frontend-typescript.md",
+    "00-Inbox/附件/frontend-ts-standards/references",
+    "00-Inbox/附件/frontend-ts-standards/SKILL.md",
+    "00-Inbox/附件/frontend-ts-standards",
     "00-Inbox/00-收集箱.md",
-    "90-知识系统/模板/QuickAdd收集.md",
-    "70-AI知识资产/工作流规范/04-Skill评估与接入.md",
-    "70-AI知识资产/工作流规范/03-排障与根因分析.md",
-    "file:D:/project/ai-market-information/docs/workflows/multi-agent.zh-CN.md",
-    "90-知识系统/脚本/tests/test_kb.py",
-    "90-知识系统/脚本/tests/test_codex_asset_sync.py",
-    "90-知识系统/模板/收集.md",
-    "90-知识系统/模板/每日成长-任务时长模板.md",
-    "90-知识系统/模板/工作流规范.md",
-    "90-知识系统/模板/审核报告.md",
-    "90-知识系统/模板/休息日-任务时长模板.md",
-    "90-知识系统/模板/人读笔记.md",
-    "90-知识系统/模板/Skill评估.md",
-    "90-知识系统/模板/AI操作卡.md",
-    "90-知识系统/脚本/tests",
-    "90-知识系统/脚本/kb.py",
-    "90-知识系统/安装/kb-capture.example.json",
-    "90-知识系统/安装/qmd.md",
-    "90-知识系统/安装/install-codex-kb.ps1",
-    "90-知识系统/安装/hooks.example.json",
-    "90-知识系统/安装/kb-capture-ask.py",
-    "90-知识系统/安装/daily-note.ps1",
-    "90-知识系统/审计/2026-11.md",
-    "90-知识系统/prompts/AGENTS.global.md",
-    "90-知识系统/设计.md",
-    "90-知识系统/模板",
-    "90-知识系统/处理日志.md",
+    "00-Inbox/2026-11-16-个人 AI 知识库搭建复盘：背景、架构与复用方法.md",
+    "file:D:/project/ai-market-information/docs/records/features/M06-global-search.zh-CN.md",
+    "file:D:/project/ai-market-information/docs/records/features/M05-launch-protocol.zh-CN.md",
+    "file:D:/project/ai-market-information/docs/records/features/M04-category-app-catalog.zh-CN.md",
+    "file:D:/project-sc/web-tv/杯把朝左-30秒短片制作任务书.md",
+    "file:D:/project/ai-market-information/docs/records/features/M03-five-category-home.zh-CN.md",
+    "20-后端/NestJS/03-DTO校验Pipe与统一异常.md",
+    "20-后端/数据库/02-SQL基础与数据库设计.md",
+    "20-后端/数据库/01-数据库基础.md",
+    "20-后端/NestJS/01-NestJS启动-Controller参数与Service-.md",
     "90-知识系统/使用说明.md",
-    "80-Skill库/Codex备份/skills/kb-query/references/search.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/triage.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/routing.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/publish.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/capture-rules.md",
-    "80-Skill库/Codex备份/skills/kb-curator/references/audit.md",
     "10-前端/Vue原理/附件/7.png",
     "10-前端/Vue原理/附件/6.png",
     "10-前端/Vue原理/附件/4.png",

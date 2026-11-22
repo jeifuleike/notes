@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "file:E:/ai-web-tv/高工资与物价购买力对比-视频策划.md",
+                "file": "20-后端/Java/02-Maven工程与JUnit单元测试.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "高工资与物价购买力对比-视频策划"
+              "title": "02-Maven工程与JUnit单元测试"
+            }
+          },
+          {
+            "id": "0d3eb90bd52284dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50-每日自律/日报/2026-11/2026-11-22.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-11-22"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -213,42 +227,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ef45c0dec288b8d7",
+  "active": "0d3eb90bd52284dd",
   "lastOpenFiles": [
-    "00-Inbox/附件/write-notes-like-deepseek/templates/proposed.md",
-    "00-Inbox/附件/write-notes-like-deepseek/templates/rejected.md",
-    "00-Inbox/附件/frontend-ts-standards/references/frontend-typescript.md",
-    "00-Inbox/附件/write-notes-like-deepseek/templates/implemented.md",
-    "00-Inbox/附件/write-notes-like-deepseek/templates/notes-README.md",
-    "00-Inbox/附件/write-notes-like-deepseek/scripts/verify-archived-agent-notes.ts",
-    "00-Inbox/附件/write-notes-like-deepseek/scripts/verify-agent-note-format.ts",
-    "00-Inbox/附件/write-notes-like-deepseek/scripts/verify-agent-note-tree.ts",
-    "00-Inbox/附件/write-notes-like-deepseek/scripts/agent-note-tree.ts",
-    "00-Inbox/附件/feature-delivery/SKILL.md",
-    "00-Inbox/附件/write-notes-like-deepseek/templates",
-    "00-Inbox/附件/frontend-ts-standards/references",
-    "00-Inbox/附件/frontend-ts-standards/SKILL.md",
-    "00-Inbox/附件/write-notes-like-deepseek/scripts",
-    "00-Inbox/附件/write-notes-like-deepseek/SKILL.md",
-    "00-Inbox/附件/multi-agent-collaboration/SKILL.md",
-    "00-Inbox/附件/feature-delivery",
-    "00-Inbox/附件/write-notes-like-deepseek",
-    "00-Inbox/附件/multi-agent-collaboration",
-    "00-Inbox/2026-11-20-前端测试浏览器分工与分层门禁.md",
-    "00-Inbox/2026-11-19-工程决策记录与流转.md",
-    "00-Inbox/2026-11-19-多 Agent 协作与任务交接.md",
-    "00-Inbox/2026-11-19-功能开发与验收.md",
-    "00-Inbox/2026-11-19-前端 TypeScript 开发规范.md",
-    "20-后端/Java/01-从TypeScript到Java-编译与运行.md",
-    "20-后端/Java/02-Maven工程与JUnit单元测试.md",
-    "20-后端/Java/00-Java后端学习路线.md",
-    "20-后端/Java/AGENTS.md",
     "50-每日自律/日报/2026-11/2026-11-21.md",
-    "50-每日自律/日报/2026-11/2026-11-20.md",
-    "50-每日自律/日报/2026-11/2026-11-19.md",
-    "20-后端/NestJS/06-Guard与Interceptor的请求链.md",
-    "20-后端/NestJS/13-Nest常用装饰器分类速查.md",
-    "20-后端/Node基础/01-Node-HTTP与请求响应基础.md",
-    "20-后端/NestJS/00-NestJS学习路线-面向SpringBoot过渡.md"
+    "50-每日自律/日报/2026-11/2026-11-22.md",
+    "50-每日自律/日报/2026-11/2026-11-12.md",
+    "50-每日自律/日报/2026-11/2026-11-13.md",
+    "20-后端/Java/02-分支循环与方法.md",
+    "20-后端/Java/01-变量类型与输出.md",
+    "80-Skill库/候选/write-notes-like-deepseek/评估.md",
+    "80-Skill库/候选/multi-agent-collaboration/评估.md",
+    "80-Skill库/候选/feature-delivery/评估.md",
+    "80-Skill库/候选/frontend-ts-standards/评估.md",
+    "70-AI知识资产/工作流规范/05-零基础学习笔记编写.md",
+    "80-Skill库/候选/write-notes-like-deepseek/templates/rejected.md",
+    "80-Skill库/候选/write-notes-like-deepseek/templates/proposed.md",
+    "80-Skill库/候选/write-notes-like-deepseek/scripts/verify-archived-agent-notes.ts",
+    "80-Skill库/候选/write-notes-like-deepseek/scripts/verify-agent-note-format.ts",
+    "80-Skill库/候选/write-notes-like-deepseek/scripts/verify-agent-note-tree.ts",
+    "80-Skill库/候选/write-notes-like-deepseek/templates/notes-README.md",
+    "80-Skill库/候选/write-notes-like-deepseek/templates/implemented.md",
+    "80-Skill库/候选/write-notes-like-deepseek/scripts/agent-note-tree.ts",
+    "80-Skill库/候选/write-notes-like-deepseek/templates",
+    "80-Skill库/候选/write-notes-like-deepseek/SKILL.md",
+    "80-Skill库/候选/write-notes-like-deepseek/scripts",
+    "80-Skill库/候选/write-notes-like-deepseek",
+    "80-Skill库/候选/multi-agent-collaboration/SKILL.md",
+    "80-Skill库/候选/multi-agent-collaboration",
+    "80-Skill库/候选/feature-delivery/SKILL.md",
+    "80-Skill库/候选/feature-delivery",
+    "80-Skill库/候选/frontend-ts-standards/references/frontend-typescript.md",
+    "80-Skill库/候选/frontend-ts-standards/SKILL.md",
+    "80-Skill库/候选/frontend-ts-standards/references",
+    "00-Inbox/已归档/2026-11/2026-11-22-零基础学习笔记编写规范.md",
+    "00-Inbox/已归档/2026-11/2026-11-20-前端测试浏览器分工与分层门禁.md",
+    "00-Inbox/已归档/2026-11/2026-11-19-工程决策记录与流转.md",
+    "00-Inbox/已归档/2026-11/2026-11-19-多 Agent 协作与任务交接.md",
+    "00-Inbox/已归档/2026-11/2026-11-19-功能开发与验收.md",
+    "00-Inbox/已归档/2026-11/2026-11-19-前端 TypeScript 开发规范.md"
   ]
 }

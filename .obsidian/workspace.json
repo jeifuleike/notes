@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-每日自律/日报/2026-11/2026-11-22.md",
+                "file": "20-后端/Java/03-类对象与列表.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-11-22"
+              "title": "03-类对象与列表"
             }
           }
         ],
@@ -227,10 +227,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0d3eb90bd52284dd",
+  "active": "0d3aae728a8ed359",
   "lastOpenFiles": [
-    "50-每日自律/日报/2026-11/2026-11-21.md",
+    "00-Inbox/2026-11-25-0918-神舟二十四号乘组确定：首位外籍航天员将进驻“天宫”.md",
+    "00-Inbox/2026-11-25-0908-superpowers：把一整套开发方法论装进 coding agent.md",
+    "00-Inbox/2026-11-25-0908-rtk：给 coding agent 压缩命令输出，省 60–90% token.md",
+    "00-Inbox/2026-11-25-0908-ffmpeg-skill：给 coding agent 装一个本地视频剪辑台.md",
+    "00-Inbox/2026-11-25-0908-dbx：25MB 的数据库客户端，内置 AI 与 MCP.md",
+    "00-Inbox/2026-11-25-0908-Firecrawl Local：本机把网页抓成干净 Markdown，直接给 Agent 用.md",
+    "20-后端/Java/04-从TypeScript到Java-编译与运行.md",
+    "20-后端/数据库/08-分布式数据库.md",
+    "20-后端/数据库/55-InnoDB提交与刷盘.md",
+    "20-后端/数据库/00-数据库学习导航.md",
+    "00-Inbox/2026-11-24-1037-MiniMind.md",
     "50-每日自律/日报/2026-11/2026-11-22.md",
+    "50-每日自律/日报/2026-11/2026-11-21.md",
     "50-每日自律/日报/2026-11/2026-11-12.md",
     "50-每日自律/日报/2026-11/2026-11-13.md",
     "20-后端/Java/02-分支循环与方法.md",
@@ -249,21 +260,10 @@
     "80-Skill库/候选/write-notes-like-deepseek/templates/implemented.md",
     "80-Skill库/候选/write-notes-like-deepseek/scripts/agent-note-tree.ts",
     "80-Skill库/候选/write-notes-like-deepseek/templates",
-    "80-Skill库/候选/write-notes-like-deepseek/SKILL.md",
     "80-Skill库/候选/write-notes-like-deepseek/scripts",
     "80-Skill库/候选/write-notes-like-deepseek",
-    "80-Skill库/候选/multi-agent-collaboration/SKILL.md",
     "80-Skill库/候选/multi-agent-collaboration",
-    "80-Skill库/候选/feature-delivery/SKILL.md",
     "80-Skill库/候选/feature-delivery",
-    "80-Skill库/候选/frontend-ts-standards/references/frontend-typescript.md",
-    "80-Skill库/候选/frontend-ts-standards/SKILL.md",
-    "80-Skill库/候选/frontend-ts-standards/references",
-    "00-Inbox/已归档/2026-11/2026-11-22-零基础学习笔记编写规范.md",
-    "00-Inbox/已归档/2026-11/2026-11-20-前端测试浏览器分工与分层门禁.md",
-    "00-Inbox/已归档/2026-11/2026-11-19-工程决策记录与流转.md",
-    "00-Inbox/已归档/2026-11/2026-11-19-多 Agent 协作与任务交接.md",
-    "00-Inbox/已归档/2026-11/2026-11-19-功能开发与验收.md",
-    "00-Inbox/已归档/2026-11/2026-11-19-前端 TypeScript 开发规范.md"
+    "80-Skill库/候选/frontend-ts-standards/references"
   ]
 }

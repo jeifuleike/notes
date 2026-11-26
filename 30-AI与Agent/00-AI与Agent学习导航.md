@@ -11,6 +11,10 @@
 
 - [[30-AI与Agent/Agent架构/01-OpenClaw核心架构深度分析]]
 
+## 工具选型
+
+- [[30-AI与Agent/工具选型/01-AI工具与学习项目收藏]]
+
 ## 实践
 
 - [[30-AI与Agent/实践/WebChat/01-WebChat产品设计]]
